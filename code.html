@@ -1,0 +1,458 @@
+<!DOCTYPE html><html lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-lowest": "#ffffff", "inverse-surface": "#2f3132", "on-error": "#ffffff", "surface-bright": "#f9f9fb", "outline": "#6e7b63", "secondary-fixed-dim": "#c7c6ca", "surface-dim": "#d9dadc", "outline-variant": "#bdcbaf", "on-secondary-container": "#626266", "on-secondary-fixed": "#1b1b1f", "on-primary-container": "#2e7200", "on-primary-fixed-variant": "#1f5100", "on-secondary": "#ffffff", "on-tertiary-fixed-variant": "#44474e", "primary": "#2b6c00", "error-container": "#ffdad6", "on-background": "#1a1c1d", "on-secondary-fixed-variant": "#46464a", "secondary-fixed": "#e3e2e6", "error": "#ba1a1a", "on-primary-fixed": "#082100", "primary-fixed": "#7fff36", "tertiary-container": "#dfe1ea", "on-error-container": "#93000a", "on-surface": "#1a1c1d", "secondary-container": "#e0dfe3", "surface": "#f9f9fb", "background": "#f9f9fb", "surface-container": "#eeeef0", "surface-container-high": "#e8e8ea", "primary-container": "#72ff13", "surface-container-low": "#f3f3f5", "on-primary": "#ffffff", "on-tertiary-fixed": "#181c22", "primary-fixed-dim": "#61e200", "inverse-on-surface": "#f0f0f2", "inverse-primary": "#61e200", "surface-tint": "#2b6c00", "surface-variant": "#e2e2e4", "on-tertiary-container": "#61646c", "surface-container-highest": "#e2e2e4", "on-tertiary": "#ffffff", "secondary": "#5e5e62", "tertiary-fixed-dim": "#c4c6cf", "tertiary-fixed": "#e0e2eb", "tertiary": "#5b5e66", "on-surface-variant": "#3e4b35" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-sm": "0.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "gutter-mobile": "0.75rem", "margin-mobile": "1rem", "space-xl": "2.5rem", "margin": "3rem", "space-md": "1rem", "gutter": "1.5rem" }, "fontFamily": { "headline-sm": ["Inter"], "headline-lg": ["Inter"], "headline-xl": ["Inter"], "metric-display": ["JetBrains Mono"], "headline-lg-mobile": ["Inter"], "body-md": ["Inter"], "label-mono": ["JetBrains Mono"], "headline-md": ["Inter"], "body-sm": ["Inter"], "headline-xl-mobile": ["Inter"], "code-md": ["JetBrains Mono"], "body-lg": ["Inter"] }, "fontSize": { "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "500" }], "headline-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "metric-display": ["32px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "500" }], "headline-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "500" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "label-mono": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "500" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "code-md": ["13px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }] } } } }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed top-0 h-screen w-72 bg-surface-container-lowest border-surface-container-highest z-50 flex flex-col justify-between select-none left-0 border-r"><div class="flex flex-col flex-1"><div class="h-16 px-space-md border-b border-surface-container-highest flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-6 h-6 rounded-lg bg-inverse-surface flex items-center justify-center"><div class="w-2 h-2 rounded bg-primary-container animate-pulse"></div></div><div class="flex flex-col"><span class="font-headline-sm text-body-md font-semibold tracking-tight text-on-surface">Demo AI</span><span class="font-label-mono text-label-mono text-secondary">AGENTIC QA ENGINE</span></div></div><span class="font-label-mono text-label-mono px-1.5 py-0.5 rounded bg-surface-container text-secondary border border-surface-container-highest">v0.1</span></div><div class="p-space-sm flex flex-col flex-1"><nav class="flex flex-col gap-1 mt-1" data-active-classes="bg-surface-container text-on-surface font-medium border-r-2 border-primary"><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-secondary hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="home" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">grid_view</span>Home</span><span class="font-label-mono text-label-mono opacity-60">01</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-secondary hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="charts" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">insights</span>Charts</span><span class="font-label-mono text-label-mono opacity-60">02</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-secondary hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="ai-agents" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">smart_toy</span>AI Agents</span><span class="font-label-mono text-label-mono px-1 py-0.2 bg-primary-container text-on-primary-fixed rounded text-[9px]">8 FLEET</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-secondary hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="knowledge-hub" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">neurology</span>Knowledge Hub</span><span class="font-label-mono text-label-mono opacity-60">04</span></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-2 rounded-lg transition-colors bg-surface-container text-on-surface font-medium border-r-2 border-primary" data-path="integrations" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">hub</span>Integrations</span><span class="font-label-mono text-label-mono text-primary font-semibold">05</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-secondary hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="settings" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">tune</span>Settings</span><span class="font-label-mono text-label-mono opacity-60">06</span></a></nav><div class="p-2.5 rounded-lg bg-surface-container-low border border-surface-container-highest flex flex-col gap-2 mt-auto"><div class="flex items-center justify-between"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[15px] text-secondary">account_balance_wallet</span><span class="font-label-mono text-[10px] text-secondary uppercase tracking-wider font-medium">Usage &amp; Credits</span></div><button class="flex items-center gap-0.5 text-primary hover:text-on-surface font-label-mono text-[10px] font-semibold transition-colors group" title="Add Credits"><span class="material-symbols-outlined text-[14px] group-hover:scale-110 transition-transform">add</span><span class="">Add</span></button></div><div class="flex items-baseline justify-between"><div class="flex items-baseline gap-1"><span class="font-metric-display text-[16px] text-on-surface font-semibold tracking-tight">$428.50</span><span class="font-label-mono text-[11px] text-secondary font-normal">/ $600</span></div><span class="font-label-mono text-[10px] px-1.5 py-0.2 rounded bg-surface-container text-secondary font-medium">71% used</span></div><div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden"><div class="bg-primary-container h-full rounded-full" style="width: 71.4%;"></div></div><div class="grid grid-cols-2 gap-2 pt-1 border-t border-surface-container-high/60 font-label-mono text-[10px] text-secondary"><div><span class="block text-[9px] uppercase tracking-wider text-tertiary">Daily</span><span class="font-medium text-on-surface text-[11px]">$34.20</span></div><div class="text-right"><span class="block text-[9px] uppercase tracking-wider text-tertiary">Weekly</span><span class="font-medium text-on-surface text-[11px]">$218.40</span></div></div></div></div></div><div class="p-space-sm border-t border-surface-container-highest flex flex-col gap-space-sm"><div class="flex items-center justify-between px-1"><div class="flex items-center gap-2"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col"><span class="font-body-sm text-body-sm font-medium leading-none text-on-surface">lead-eng@demo</span></div></div><div class="flex items-center gap-2 text-secondary"><span class="material-symbols-outlined text-[18px] hover:text-on-surface cursor-pointer" title="Account Settings">settings</span><span class="material-symbols-outlined text-[18px] hover:text-on-surface cursor-pointer" title="Logout">logout</span></div></div></div></aside><div class="" style="padding-left: 18rem;"><header class="fixed top-0 h-16 bg-surface-container-lowest/90 backdrop-blur-md border-b border-surface-container-highest z-40 px-space-md flex items-center justify-between right-0" style="left: 18rem;"><div class="flex-1 flex justify-center max-w-xl mx-auto"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-3 text-[18px] text-secondary">search</span><input class="w-full h-[38px] pl-9 pr-14 rounded-lg bg-surface-container-low border border-surface-container-highest text-body-sm font-body-sm text-on-surface placeholder:text-secondary focus:outline-none focus:border-primary-container transition-colors" placeholder="Find integrations, webhooks, API keys... (Cmd+K)" type="text"><span class="absolute right-2.5 font-label-mono text-[10px] px-1.5 py-0.5 rounded bg-surface-container-high text-secondary border border-surface-container-highest select-none pointer-events-none">⌘K</span></div></div><div class="flex items-center gap-space-sm"><button class="h-9 px-3 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm text-body-sm font-medium flex items-center gap-1.5 border border-surface-container-highest transition-colors"><span class="material-symbols-outlined text-[16px] text-secondary">menu_book</span><span class="font-label-mono text-label-mono">API Docs</span></button><button class="h-9 px-3.5 rounded-lg bg-primary-container hover:brightness-105 active:scale-95 transition-all text-on-primary-fixed font-body-sm text-body-sm font-semibold flex items-center gap-1.5 shadow-[0_1px_4px_rgba(0,0,0,0.06)]"><span class="material-symbols-outlined text-[18px]">add</span><span class="">Add Integration</span></button></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Command & Header Ribbon -->
+<section class="w-full bg-surface-container-lowest px-space-lg py-space-md shadow-sm border-b border-surface-container-highest">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 font-label-mono text-label-mono text-secondary">
+<span class="hover:text-on-surface cursor-pointer transition-colors">Demo AI</span>
+<span class="text-tertiary">/</span>
+<span class="text-on-surface font-semibold tracking-wide">Integrations &amp; Toolchain</span>
+</div>
+<h1 class="font-headline-sm text-[22px] font-semibold text-on-surface tracking-tight mt-0.5">Integrations &amp; Toolchain Ecosystem</h1>
+<p class="font-body-sm text-body-sm text-secondary">Connect autonomous Demo AI agents directly with your CI/CD pipelines, issue trackers, version control, and observability stacks.</p>
+</div>
+<div class="flex items-center gap-space-sm self-start lg:self-auto">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 bg-surface-container-low rounded-lg border border-surface-container-highest">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-mono text-label-mono text-on-surface">14 Services Active · 0 Failed Syncs</span>
+</div>
+</div>
+</div>
+</section>
+<div class="px-space-lg py-space-lg flex flex-col gap-space-lg">
+<!-- 4 Metric Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm border border-surface-container-highest flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-mono text-label-mono uppercase tracking-wider">Connected Services</span>
+<span class="material-symbols-outlined text-[18px] text-primary">hub</span>
+</div>
+<div class="my-2">
+<div class="font-metric-display text-[28px] text-on-surface font-semibold tracking-tight">14 <span class="text-body-sm font-normal text-secondary">Active</span></div>
+<p class="font-body-sm text-[12px] text-primary flex items-center gap-1 mt-1 font-medium">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> All Systems Operational
+</p>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden"><div class="bg-primary-container h-full rounded-full" style="width: 100%;"></div></div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm border border-surface-container-highest flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-mono text-label-mono uppercase tracking-wider">Webhook Ingestion</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">sync_alt</span>
+</div>
+<div class="my-2">
+<div class="font-metric-display text-[28px] text-on-surface font-semibold tracking-tight">482.1k <span class="text-body-sm font-normal text-secondary">events/day</span></div>
+<p class="font-body-sm text-[12px] text-primary flex items-center gap-1 mt-1 font-medium">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> 99.99% delivery rate
+</p>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden"><div class="bg-primary-container h-full rounded-full" style="width: 99.9%;"></div></div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm border border-surface-container-highest flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-mono text-label-mono uppercase tracking-wider">Active API Keys</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">key</span>
+</div>
+<div class="my-2">
+<div class="font-metric-display text-[28px] text-on-surface font-semibold tracking-tight">6 <span class="text-body-sm font-normal text-secondary">Prod / 12 Stg</span></div>
+<p class="font-body-sm text-[12px] text-secondary mt-1">
+Auto-rotated via HashiCorp Vault
+</p>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden"><div class="bg-primary-container h-full rounded-full" style="width: 75%;"></div></div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm border border-surface-container-highest flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-mono text-label-mono uppercase tracking-wider">Sync Health</span>
+<span class="material-symbols-outlined text-[18px] text-primary">verified</span>
+</div>
+<div class="my-2">
+<div class="font-metric-display text-[28px] text-on-surface font-semibold tracking-tight">100%</div>
+<p class="font-body-sm text-[12px] text-primary mt-1 font-medium">
+Zero Schema / Contract Drift
+</p>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden"><div class="bg-primary-container h-full rounded-full" style="width: 100%;"></div></div>
+</div>
+</div>
+<!-- Category Filter Tabs -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-mono text-label-mono font-medium border border-surface-container-highest">All (24)</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-secondary hover:text-on-surface font-label-mono text-label-mono transition-colors border border-surface-container-highest">CI/CD &amp; Repositories (6)</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-secondary hover:text-on-surface font-label-mono text-label-mono transition-colors border border-surface-container-highest">Issue Trackers &amp; PRDs (5)</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-secondary hover:text-on-surface font-label-mono text-label-mono transition-colors border border-surface-container-highest">Cloud &amp; Emulators (4)</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-secondary hover:text-on-surface font-label-mono text-label-mono transition-colors border border-surface-container-highest">Alerts &amp; Observability (5)</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-secondary hover:text-on-surface font-label-mono text-label-mono transition-colors border border-surface-container-highest">Security &amp; Auth (4)</button>
+</div>
+<!-- Integrations Cards Grid (12 items) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- 1. GitHub -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm border border-surface-container-highest flex flex-col justify-between hover:shadow-md transition-shadow group">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center font-bold text-on-surface text-[16px]">GH</div>
+<div>
+<h3 class="font-headline-sm text-[16px] font-semibold text-on-surface group-hover:text-primary transition-colors">GitHub</h3>
+<span class="font-label-mono text-[11px] text-secondary">Git Provider &amp; Actions</span>
+</div>
+</div>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-primary-container text-on-primary-fixed font-semibold">Synced</span>
+</div>
+<p class="font-body-sm text-[13px] text-secondary mt-3">Branch push and pull request webhooks active across 42 repositories. Auto-dispatches Mio QA runners on commit.</p>
+<div class="mt-3 p-2 rounded bg-surface-container-low font-label-mono text-[11px] text-on-surface flex items-center justify-between">
+<span class="text-secondary">Webhook: 24 active hooks</span>
+<span class="text-primary font-medium">Connected</span>
+</div>
+</div>
+<div class="mt-4 pt-2 border-t border-surface-container-high flex items-center justify-between">
+<span class="font-label-mono text-[11px] text-secondary">v2.8.4</span>
+<button class="px-3 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-[12px] font-medium transition-colors">Configure</button>
+</div>
+</div>
+<!-- 2. GitLab -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm border border-surface-container-highest flex flex-col justify-between hover:shadow-md transition-shadow group">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center font-bold text-on-surface text-[16px]">GL</div>
+<div>
+<h3 class="font-headline-sm text-[16px] font-semibold text-on-surface group-hover:text-primary transition-colors">GitLab</h3>
+<span class="font-label-mono text-[11px] text-secondary">Enterprise CI/CD</span>
+</div>
+</div>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-primary-container text-on-primary-fixed font-semibold">Active</span>
+</div>
+<p class="font-body-sm text-[13px] text-secondary mt-3">Automated pipeline triggers for staging merges. Synchronizes synthetic validation jobs with self-hosted runners.</p>
+<div class="mt-3 p-2 rounded bg-surface-container-low font-label-mono text-[11px] text-on-surface flex items-center justify-between">
+<span class="text-secondary">Pipeline: .gitlab-ci.yml</span>
+<span class="text-primary font-medium">Connected</span>
+</div>
+</div>
+<div class="mt-4 pt-2 border-t border-surface-container-high flex items-center justify-between">
+<span class="font-label-mono text-[11px] text-secondary">OAuth2 · Token Valid</span>
+<button class="px-3 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-[12px] font-medium transition-colors">Configure</button>
+</div>
+</div>
+<!-- 3. Linear -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm border border-surface-container-highest flex flex-col justify-between hover:shadow-md transition-shadow group">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center font-bold text-on-surface text-[16px]">LN</div>
+<div>
+<h3 class="font-headline-sm text-[16px] font-semibold text-on-surface group-hover:text-primary transition-colors">Linear</h3>
+<span class="font-label-mono text-[11px] text-secondary">Issue Tracking &amp; Regressions</span>
+</div>
+</div>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-primary-container text-on-primary-fixed font-semibold">Active</span>
+</div>
+<p class="font-body-sm text-[13px] text-secondary mt-3">Automatically creates tagged regression issues with full browser trace recordings, DOM diffs, and repro steps.</p>
+<div class="mt-3 p-2 rounded bg-surface-container-low font-label-mono text-[11px] text-on-surface flex items-center justify-between">
+<span class="text-secondary">Team: Core Engineering</span>
+<span class="text-primary font-medium">Connected</span>
+</div>
+</div>
+<div class="mt-4 pt-2 border-t border-surface-container-high flex items-center justify-between">
+<span class="font-label-mono text-[11px] text-secondary">Webhook synced</span>
+<button class="px-3 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-[12px] font-medium transition-colors">Configure</button>
+</div>
+</div>
+<!-- 4. Jira Software -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm border border-surface-container-highest flex flex-col justify-between hover:shadow-md transition-shadow group">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center font-bold text-on-surface text-[16px]">JR</div>
+<div>
+<h3 class="font-headline-sm text-[16px] font-semibold text-on-surface group-hover:text-primary transition-colors">Jira Software</h3>
+<span class="font-label-mono text-[11px] text-secondary">Atlassian Issue Sync</span>
+</div>
+</div>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-surface-container text-secondary font-medium">Available</span>
+</div>
+<p class="font-body-sm text-[13px] text-secondary mt-3">Bi-directional synchronization of QA bug verification steps, triage workflows, and epic test run statuses.</p>
+<div class="mt-3 p-2 rounded bg-surface-container-low font-label-mono text-[11px] text-on-surface flex items-center justify-between">
+<span class="text-secondary">Instance: Not connected</span>
+<span class="text-secondary font-medium">Pending Setup</span>
+</div>
+</div>
+<div class="mt-4 pt-2 border-t border-surface-container-high flex items-center justify-between">
+<span class="font-label-mono text-[11px] text-secondary">Cloud / Server</span>
+<button class="px-3 py-1 rounded bg-primary-container hover:brightness-105 text-on-primary-fixed font-body-sm text-[12px] font-semibold transition-all">Connect</button>
+</div>
+</div>
+<!-- 5. Figma -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm border border-surface-container-highest flex flex-col justify-between hover:shadow-md transition-shadow group">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center font-bold text-on-surface text-[16px]">FG</div>
+<div>
+<h3 class="font-headline-sm text-[16px] font-semibold text-on-surface group-hover:text-primary transition-colors">Figma</h3>
+<span class="font-label-mono text-[11px] text-secondary">Tokens &amp; Design Spec Syncer</span>
+</div>
+</div>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-primary-container text-on-primary-fixed font-semibold">Live</span>
+</div>
+<p class="font-body-sm text-[13px] text-secondary mt-3">Live webhook triggered on design token publications and component changes. Informs automated UI assertion specs.</p>
+<div class="mt-3 p-2 rounded bg-surface-container-low font-label-mono text-[11px] text-on-surface flex items-center justify-between">
+<span class="text-secondary">Design System: v4.2</span>
+<span class="text-primary font-medium">Connected</span>
+</div>
+</div>
+<div class="mt-4 pt-2 border-t border-surface-container-high flex items-center justify-between">
+<span class="font-label-mono text-[11px] text-secondary">Auto-sync enabled</span>
+<button class="px-3 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-[12px] font-medium transition-colors">Configure</button>
+</div>
+</div>
+<!-- 6. Postman / OpenAPI -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm border border-surface-container-highest flex flex-col justify-between hover:shadow-md transition-shadow group">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center font-bold text-on-surface text-[16px]">API</div>
+<div>
+<h3 class="font-headline-sm text-[16px] font-semibold text-on-surface group-hover:text-primary transition-colors">Postman / OpenAPI</h3>
+<span class="font-label-mono text-[11px] text-secondary">API Schema Validator</span>
+</div>
+</div>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-primary-container text-on-primary-fixed font-semibold">Verified</span>
+</div>
+<p class="font-body-sm text-[13px] text-secondary mt-3">Strict API contract drift verification comparing backend payloads against generated frontend synthetic client tests.</p>
+<div class="mt-3 p-2 rounded bg-surface-container-low font-label-mono text-[11px] text-on-surface flex items-center justify-between">
+<span class="text-secondary">Schema: openapi-v3.yaml</span>
+<span class="text-primary font-medium">Connected</span>
+</div>
+</div>
+<div class="mt-4 pt-2 border-t border-surface-container-high flex items-center justify-between">
+<span class="font-label-mono text-[11px] text-secondary">Sync every 15m</span>
+<button class="px-3 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-[12px] font-medium transition-colors">Configure</button>
+</div>
+</div>
+<!-- 7. Slack -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm border border-surface-container-highest flex flex-col justify-between hover:shadow-md transition-shadow group">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center font-bold text-on-surface text-[16px]">SL</div>
+<div>
+<h3 class="font-headline-sm text-[16px] font-semibold text-on-surface group-hover:text-primary transition-colors">Slack</h3>
+<span class="font-label-mono text-[11px] text-secondary">Fleet Alerts &amp; Triage Channels</span>
+</div>
+</div>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-primary-container text-on-primary-fixed font-semibold">Active</span>
+</div>
+<p class="font-body-sm text-[13px] text-secondary mt-3">Streams high-priority QA regressions and one-click self-healing approvals directly into #eng-qa-alerts channel.</p>
+<div class="mt-3 p-2 rounded bg-surface-container-low font-label-mono text-[11px] text-on-surface flex items-center justify-between">
+<span class="text-secondary">Target: #eng-qa-alerts</span>
+<span class="text-primary font-medium">Connected</span>
+</div>
+</div>
+<div class="mt-4 pt-2 border-t border-surface-container-high flex items-center justify-between">
+<span class="font-label-mono text-[11px] text-secondary">Bot: @mio-agent</span>
+<button class="px-3 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-[12px] font-medium transition-colors">Configure</button>
+</div>
+</div>
+<!-- 8. Datadog -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm border border-surface-container-highest flex flex-col justify-between hover:shadow-md transition-shadow group">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center font-bold text-on-surface text-[16px]">DD</div>
+<div>
+<h3 class="font-headline-sm text-[16px] font-semibold text-on-surface group-hover:text-primary transition-colors">Datadog</h3>
+<span class="font-label-mono text-[11px] text-secondary">APM &amp; Telemetry Forwarding</span>
+</div>
+</div>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-primary-container text-on-primary-fixed font-semibold">Healthy</span>
+</div>
+<p class="font-body-sm text-[13px] text-secondary mt-3">Trace ingestion and synthetic metric forwarding for full latency histograms, p99 regression detection, and spans.</p>
+<div class="mt-3 p-2 rounded bg-surface-container-low font-label-mono text-[11px] text-on-surface flex items-center justify-between">
+<span class="text-secondary">APM: eu1.datadoghq.com</span>
+<span class="text-primary font-medium">Connected</span>
+</div>
+</div>
+<div class="mt-4 pt-2 border-t border-surface-container-high flex items-center justify-between">
+<span class="font-label-mono text-[11px] text-secondary">Forwarding: 100%</span>
+<button class="px-3 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-[12px] font-medium transition-colors">Configure</button>
+</div>
+</div>
+<!-- 9. AWS Device Farm -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm border border-surface-container-highest flex flex-col justify-between hover:shadow-md transition-shadow group">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center font-bold text-on-surface text-[16px]">AWS</div>
+<div>
+<h3 class="font-headline-sm text-[16px] font-semibold text-on-surface group-hover:text-primary transition-colors">AWS Device Farm</h3>
+<span class="font-label-mono text-[11px] text-secondary">Mobile Simulator Cloud</span>
+</div>
+</div>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-primary-container text-on-primary-fixed font-semibold">Active</span>
+</div>
+<p class="font-body-sm text-[13px] text-secondary mt-3">Direct dispatch of multi-device iOS CoreSim and Android headless emulator runs triggered by synthetic agent suites.</p>
+<div class="mt-3 p-2 rounded bg-surface-container-low font-label-mono text-[11px] text-on-surface flex items-center justify-between">
+<span class="text-secondary">Region: us-west-2</span>
+<span class="text-primary font-medium">Connected</span>
+</div>
+</div>
+<div class="mt-4 pt-2 border-t border-surface-container-high flex items-center justify-between">
+<span class="font-label-mono text-[11px] text-secondary">24 Devices Pooled</span>
+<button class="px-3 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-[12px] font-medium transition-colors">Configure</button>
+</div>
+</div>
+<!-- 10. Sentry -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm border border-surface-container-highest flex flex-col justify-between hover:shadow-md transition-shadow group">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center font-bold text-on-surface text-[16px]">SN</div>
+<div>
+<h3 class="font-headline-sm text-[16px] font-semibold text-on-surface group-hover:text-primary transition-colors">Sentry</h3>
+<span class="font-label-mono text-[11px] text-secondary">Exception Correlation</span>
+</div>
+</div>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-surface-container text-secondary font-medium">Available</span>
+</div>
+<p class="font-body-sm text-[13px] text-secondary mt-3">Correlates frontend unhandled exception stack traces with automated browser playback replays and error signatures.</p>
+<div class="mt-3 p-2 rounded bg-surface-container-low font-label-mono text-[11px] text-on-surface flex items-center justify-between">
+<span class="text-secondary">Project: Not mapped</span>
+<span class="text-secondary font-medium">Pending Setup</span>
+</div>
+</div>
+<div class="mt-4 pt-2 border-t border-surface-container-high flex items-center justify-between">
+<span class="font-label-mono text-[11px] text-secondary">DSN required</span>
+<button class="px-3 py-1 rounded bg-primary-container hover:brightness-105 text-on-primary-fixed font-body-sm text-[12px] font-semibold transition-all">Connect</button>
+</div>
+</div>
+<!-- 11. PagerDuty -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm border border-surface-container-highest flex flex-col justify-between hover:shadow-md transition-shadow group">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center font-bold text-on-surface text-[16px]">PD</div>
+<div>
+<h3 class="font-headline-sm text-[16px] font-semibold text-on-surface group-hover:text-primary transition-colors">PagerDuty</h3>
+<span class="font-label-mono text-[11px] text-secondary">Incident Escalation</span>
+</div>
+</div>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-primary-container text-on-primary-fixed font-semibold">Active</span>
+</div>
+<p class="font-body-sm text-[13px] text-secondary mt-3">Automatic P0/P1 triage escalation policy paging on-call QA and release champions whenever deployment locks trip.</p>
+<div class="mt-3 p-2 rounded bg-surface-container-low font-label-mono text-[11px] text-on-surface flex items-center justify-between">
+<span class="text-secondary">Service: QA-Deployment-Gate</span>
+<span class="text-primary font-medium">Connected</span>
+</div>
+</div>
+<div class="mt-4 pt-2 border-t border-surface-container-high flex items-center justify-between">
+<span class="font-label-mono text-[11px] text-secondary">Escalation Level 1</span>
+<button class="px-3 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-[12px] font-medium transition-colors">Configure</button>
+</div>
+</div>
+<!-- 12. HashiCorp Vault -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm border border-surface-container-highest flex flex-col justify-between hover:shadow-md transition-shadow group">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center font-bold text-on-surface text-[16px]">VT</div>
+<div>
+<h3 class="font-headline-sm text-[16px] font-semibold text-on-surface group-hover:text-primary transition-colors">HashiCorp Vault</h3>
+<span class="font-label-mono text-[11px] text-secondary">Secrets &amp; Token Storage</span>
+</div>
+</div>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-primary-container text-on-primary-fixed font-semibold">Secure</span>
+</div>
+<p class="font-body-sm text-[13px] text-secondary mt-3">Hardware security module (HSM) backed token storage. Automatically rotates test customer credentials on synthetic runs.</p>
+<div class="mt-3 p-2 rounded bg-surface-container-low font-label-mono text-[11px] text-on-surface flex items-center justify-between">
+<span class="text-secondary">Engine: kv-v2/qa-secrets</span>
+<span class="text-primary font-medium">Connected</span>
+</div>
+</div>
+<div class="mt-4 pt-2 border-t border-surface-container-high flex items-center justify-between">
+<span class="font-label-mono text-[11px] text-secondary">Auto-rotated 2h ago</span>
+<button class="px-3 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-[12px] font-medium transition-colors">Configure</button>
+</div>
+</div>
+</div>
+<!-- Webhook & Ingress Log Stream Table -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm border border-surface-container-highest flex flex-col gap-space-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<h3 class="font-headline-sm text-[18px] text-on-surface font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">history</span>
+Recent Webhook &amp; Ingress Log Stream
+</h3>
+<p class="font-body-sm text-[13px] text-secondary mt-0.5">Live payload ingress events received across integrated third-party platforms.</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-label-mono text-[11px] text-secondary">Listening on 10.0.4.12:8088</span>
+</div>
+</div>
+<div class="overflow-x-auto mt-2">
+<table class="w-full text-left font-body-sm text-body-sm border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-secondary font-label-mono text-label-mono uppercase tracking-wider">
+<th class="py-2.5 px-3 rounded-l">Event ID / Source</th>
+<th class="py-2.5 px-3">Event Type</th>
+<th class="py-2.5 px-3">Target Repository / Resource</th>
+<th class="py-2.5 px-3">Latency</th>
+<th class="py-2.5 px-3 rounded-r text-right">Ingress Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high font-code-md text-[12px]">
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-3 text-on-surface font-medium">
+<span class="font-label-mono text-secondary mr-2">#whk-94012</span> GitHub
+</td>
+<td class="py-2.5 px-3 text-on-surface">pull_request.synchronize</td>
+<td class="py-2.5 px-3 text-secondary">demo-ai/checkout-tokens-v2</td>
+<td class="py-2.5 px-3 text-secondary font-label-mono">28ms</td>
+<td class="py-2.5 px-3 text-right"><span class="px-2 py-0.5 rounded bg-primary-container text-on-primary-fixed font-label-mono text-[10px] font-semibold">200 OK</span></td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-3 text-on-surface font-medium">
+<span class="font-label-mono text-secondary mr-2">#whk-94011</span> Linear
+</td>
+<td class="py-2.5 px-3 text-on-surface">issue.created</td>
+<td class="py-2.5 px-3 text-secondary">ENG-4912 / checkout-auth-drop</td>
+<td class="py-2.5 px-3 text-secondary font-label-mono">14ms</td>
+<td class="py-2.5 px-3 text-right"><span class="px-2 py-0.5 rounded bg-primary-container text-on-primary-fixed font-label-mono text-[10px] font-semibold">200 OK</span></td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-3 text-on-surface font-medium">
+<span class="font-label-mono text-secondary mr-2">#whk-94010</span> Figma
+</td>
+<td class="py-2.5 px-3 text-on-surface">library_publish</td>
+<td class="py-2.5 px-3 text-secondary">core-design-tokens-v4</td>
+<td class="py-2.5 px-3 text-secondary font-label-mono">42ms</td>
+<td class="py-2.5 px-3 text-right"><span class="px-2 py-0.5 rounded bg-primary-container text-on-primary-fixed font-label-mono text-[10px] font-semibold">200 OK</span></td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-3 text-on-surface font-medium">
+<span class="font-label-mono text-secondary mr-2">#whk-94009</span> Datadog
+</td>
+<td class="py-2.5 px-3 text-on-surface">metric.alert.triggered</td>
+<td class="py-2.5 px-3 text-secondary">p99-latency-checkout-synthetic</td>
+<td class="py-2.5 px-3 text-secondary font-label-mono">19ms</td>
+<td class="py-2.5 px-3 text-right"><span class="px-2 py-0.5 rounded bg-surface-container text-secondary font-label-mono text-[10px] font-semibold">Acknowledged</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div></main></div>
+
+
+
+
+
+
+</body></html>
