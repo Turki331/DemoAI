@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+
+<html lang="en" style=""><head></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><svg aria-hidden="true" class="inline-defs-container" style="position:absolute;width:0;height:0;overflow:hidden"></svg><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-lowest": "#ffffff", "inverse-surface": "#2f3132", "on-error": "#ffffff", "surface-bright": "#f9f9fb", "outline": "#6e7b63", "secondary-fixed-dim": "#c7c6ca", "surface-dim": "#d9dadc", "outline-variant": "#bdcbaf", "on-secondary-container": "#626266", "on-secondary-fixed": "#1b1b1f", "on-primary-container": "#2e7200", "on-primary-fixed-variant": "#1f5100", "on-secondary": "#ffffff", "on-tertiary-fixed-variant": "#44474e", "primary": "#2b6c00", "error-container": "#ffdad6", "on-background": "#1a1c1d", "on-secondary-fixed-variant": "#46464a", "secondary-fixed": "#e3e2e6", "error": "#ba1a1a", "on-primary-fixed": "#082100", "primary-fixed": "#7fff36", "tertiary-container": "#dfe1ea", "on-error-container": "#93000a", "on-surface": "#1a1c1d", "secondary-container": "#e0dfe3", "surface": "#f9f9fb", "background": "#f9f9fb", "surface-container": "#eeeef0", "surface-container-high": "#e8e8ea", "primary-container": "#72ff13", "surface-container-low": "#f3f3f5", "on-primary": "#ffffff", "on-tertiary-fixed": "#181c22", "primary-fixed-dim": "#61e200", "inverse-on-surface": "#f0f0f2", "inverse-primary": "#61e200", "surface-tint": "#2b6c00", "surface-variant": "#e2e2e4", "on-tertiary-container": "#61646c", "surface-container-highest": "#e2e2e4", "on-tertiary": "#ffffff", "secondary": "#5e5e62", "tertiary-fixed-dim": "#c4c6cf", "tertiary-fixed": "#e0e2eb", "tertiary": "#5b5e66", "on-surface-variant": "#3e4b35" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-sm": "0.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "gutter-mobile": "0.75rem", "margin-mobile": "1rem", "space-xl": "2.5rem", "margin": "3rem", "space-md": "1rem", "gutter": "1.5rem" }, "fontFamily": { "headline-sm": ["Inter"], "headline-lg": ["Inter"], "headline-xl": ["Inter"], "metric-display": ["JetBrains Mono"], "headline-lg-mobile": ["Inter"], "body-md": ["Inter"], "label-mono": ["JetBrains Mono"], "headline-md": ["Inter"], "body-sm": ["Inter"], "headline-xl-mobile": ["Inter"], "code-md": ["JetBrains Mono"], "body-lg": ["Inter"] }, "fontSize": { "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "500" }], "headline-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "metric-display": ["32px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "500" }], "headline-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "500" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "label-mono": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "500" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "code-md": ["13px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }] } } } }</script><aside class="fixed top-0 h-screen w-72 bg-surface-container-lowest border-surface-container-highest z-50 flex flex-col justify-between select-none left-0"><div class="flex flex-col flex-1"><div class="h-16 px-space-md border-b border-surface-container-highest flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-6 h-6 rounded-lg bg-inverse-surface flex items-center justify-center"><div class="w-2 h-2 rounded bg-primary-container animate-pulse"></div></div><div class="flex flex-col"><span class="font-headline-sm text-body-md font-semibold tracking-tight text-on-surface">Demo AI</span><span class="font-label-mono text-label-mono text-secondary">AGENTIC QA ENGINE</span></div></div><span class="font-label-mono text-label-mono px-1.5 py-0.5 rounded bg-surface-container text-secondary border border-surface-container-highest">v0.1</span></div><div class="p-space-sm flex-1 flex flex-col"><nav class="flex flex-col gap-1 mt-1" data-active-classes="bg-surface-container text-on-surface font-medium border-r-2 border-primary"><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-secondary hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="home" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">grid_view</span>Home</span><span class="font-label-mono text-label-mono opacity-60">01</span></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-2 rounded-lg transition-colors bg-surface-container text-on-surface font-medium border-r-2 border-primary" data-path="charts" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">insights</span>Charts</span><span class="font-label-mono text-label-mono opacity-60">02</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-secondary hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="ai-agents" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">smart_toy</span>AI Agents</span><span class="font-label-mono text-label-mono px-1 py-0.2 bg-primary-container text-on-primary-fixed rounded text-[9px]">8 FLEET</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-secondary hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="knowledge-hub" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">neurology</span>Knowledge Hub</span><span class="font-label-mono text-label-mono opacity-60">04</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-secondary hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="integrations" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">hub</span>Integrations</span><span class="font-label-mono text-label-mono opacity-60">05</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-secondary hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="settings" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">tune</span>Settings</span><span class="font-label-mono text-label-mono opacity-60">06</span></a></nav><div class="p-space-sm rounded-lg bg-surface-container-low border border-surface-container-highest flex flex-col gap-1.5 mt-space-sm mt-auto"><div class="flex items-center justify-between font-label-mono text-[10px] text-secondary uppercase tracking-wider"><span class="flex items-center gap-1 font-semibold text-secondary"><span class="material-symbols-outlined text-[13px] text-primary">account_balance_wallet</span>USAGE &amp; CREDITS</span><button class="w-4 h-4 rounded bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface hover:text-primary transition-colors" title="Add Credits" type="button"><span class="material-symbols-outlined text-[12px]">add</span></button></div><div class="flex items-baseline justify-between mt-0.5"><span class="font-code-md text-code-md font-semibold text-on-surface">$428.50<span class="text-secondary text-[11px] font-normal"> / $600.00</span></span><span class="font-label-mono text-[10px] font-medium text-primary bg-primary-container/20 px-1 py-0.2 rounded">71% used</span></div><div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden flex"><div class="bg-primary-container h-full rounded-full" style="width: 71.4%"></div></div><div class="grid grid-cols-2 gap-1 pt-1 border-t border-surface-container font-label-mono text-[10px] text-secondary"><div class="">Daily: <span class="font-medium text-on-surface">$34.20</span></div><div class="text-right">Weekly: <span class="font-medium text-on-surface">$218.40</span></div></div></div></div></div><div class="p-space-sm border-t border-surface-container-highest flex flex-col gap-space-sm"><div class="flex items-center justify-between px-1"><div class="flex items-center gap-2"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><a class="material-symbols-outlined text-[18px] text-secondary hover:text-on-surface cursor-pointer transition-colors" href="#settings" title="Settings">settings</a><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col"><span class="font-body-sm text-body-sm font-medium leading-none text-on-surface">lead-eng@demo</span></div></div><a class="material-symbols-outlined text-[18px] text-secondary hover:text-on-surface cursor-pointer transition-colors" href="#settings" title="Settings">settings</a><span class="material-symbols-outlined text-[18px] text-secondary hover:text-on-surface cursor-pointer">logout</span></div></div></aside><div class="pl-72"><header class="fixed top-0 h-16 bg-surface-container-lowest/90 backdrop-blur-md border-b border-surface-container-highest z-40 px-space-md flex items-center justify-center right-0 left-72"><div class="w-full max-w-xl flex items-center justify-center"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-3 text-[18px] text-secondary">search</span><input class="w-full h-[38px] pl-9 pr-14 rounded-lg bg-surface-container-low border border-surface-container-highest text-body-sm font-body-sm text-on-surface placeholder:text-secondary focus:outline-none focus:border-primary-container" placeholder="Find test suites, agents, traces... (Cmd+K)" type="text"/><span class="absolute right-2 font-label-mono text-[10px] px-1.5 py-0.5 rounded bg-surface-container-high text-secondary border border-surface-container-highest">⌘K</span></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full min-h-[calc(100vh-4rem)]">
+<!-- 1. Sub-Header Toolbar -->
+<div class="bg-surface-container-lowest border-b border-surface-container-highest px-6 py-3 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-3 shadow-sm select-none">
+<!-- Breadcrumb + Scenario Switcher -->
+<div class="flex flex-wrap items-center gap-3">
+<div class="flex items-center gap-1.5 font-label-mono text-[11px] text-secondary">
+<span class="hover:text-on-surface cursor-pointer">Charts</span>
+<span class="text-secondary-fixed-dim">/</span>
+<span class="text-secondary font-medium">Client: Aramco Digital</span>
+<span class="text-secondary-fixed-dim">/</span>
+<span class="text-on-surface font-semibold">Q3 Restructure Scenario B (Moderate)</span>
+</div>
+<!-- Scenario Switcher -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-low hover:bg-surface-container text-on-surface font-label-mono text-label-mono font-medium pl-3 pr-8 py-1.5 rounded-lg border border-surface-container-highest cursor-pointer focus:outline-none focus:border-primary transition-colors">
+<option selected="">Scenario B: Moderate (Selected)</option>
+<option>Scenario A: Aggressive (-18% Cost)</option>
+<option>Scenario C: Conservative (Current Ops)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2 text-[14px] text-secondary pointer-events-none">expand_more</span>
+</div>
+<!-- View Modes -->
+<div class="bg-surface-container-low p-0.5 rounded-lg border border-surface-container flex items-center text-label-mono font-label-mono">
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface font-semibold shadow-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">account_tree</span>
+          Tree Hierarchy
+        </button>
+<button class="px-2.5 py-1 rounded text-secondary hover:text-on-surface flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]">hub</span>
+          Matrix Dotted-Line
+        </button>
+<button class="px-2.5 py-1 rounded text-secondary hover:text-on-surface flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]">workspaces</span>
+          Department Groups
+        </button>
+</div>
+</div>
+<!-- Right Side Toolbar: Financial Impact Pill & Actions -->
+<div class="flex flex-wrap items-center gap-2.5">
+<!-- Financial Impact Summary Pill -->
+<div class="px-3 py-1.5 rounded-lg bg-surface-container border border-surface-container-highest flex items-center gap-2.5 font-label-mono text-[11px] text-secondary">
+<span class="flex items-center gap-1 font-semibold text-primary">
+<span class="material-symbols-outlined text-[14px]">trending_down</span>
+          Payroll Delta: -$3.42M/yr
+        </span>
+<span class="w-1 h-3 bg-secondary-fixed-dim rounded-full"></span>
+<span>Headcount: <strong class="text-on-surface">1,240</strong> <span class="text-error font-semibold">(-48)</span></span>
+<span class="w-1 h-3 bg-secondary-fixed-dim rounded-full"></span>
+<span>Actual: <strong class="text-on-surface">$118M</strong></span>
+<span class="w-1 h-3 bg-secondary-fixed-dim rounded-full"></span>
+<span>Committed: <strong class="text-on-surface">$12.4M</strong></span>
+</div>
+<!-- Action Buttons -->
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface border border-surface-container-highest font-label-mono text-label-mono font-medium flex items-center gap-1.5 transition-colors" title="Trigger Command Palette">
+<span class="material-symbols-outlined text-[15px] text-primary">smart_toy</span>
+<span>AI NL Command</span>
+<span class="px-1 py-0.2 bg-surface-container-lowest rounded text-[9px] border border-surface-container text-secondary">⌘K</span>
+</button>
+<button class="px-2.5 py-1.5 rounded-lg bg-primary-container text-on-primary-fixed hover:brightness-105 font-label-mono text-label-mono font-semibold flex items-center gap-1.5 shadow-xs transition-all">
+<span class="material-symbols-outlined text-[15px]">troubleshoot</span>
+<span>Run Gap Analysis</span>
+</button>
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface border border-surface-container-highest font-label-mono text-label-mono font-medium flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[15px] text-secondary">ios_share</span>
+<span>Export Deliverable</span>
+</button>
+</div>
+</div>
+<!-- 2. Main Work Area: 3-Column Workspace -->
+<div class="grid grid-cols-1 lg:grid-cols-12 flex-1 w-full bg-surface-container-low min-h-[calc(100vh-7.5rem)]">
+<!-- 2A. LEFT SIDE CONTROLS / INGESTION & LAYERS (20% width -> lg:col-span-3 xl:col-span-2) -->
+<div class="lg:col-span-3 xl:col-span-2 bg-surface-container-lowest border-r border-surface-container-highest p-4 flex flex-col gap-5 select-none overflow-y-auto">
+<!-- Section 1: Data Ingestion & Live Feeds -->
+<div class="flex flex-col gap-2.5">
+<div class="flex items-center justify-between font-label-mono text-[10px] text-secondary uppercase tracking-wider">
+<span class="flex items-center gap-1 font-semibold text-secondary">
+<span class="material-symbols-outlined text-[14px] text-primary">cloud_sync</span>
+            Data Ingestion &amp; Feeds
+          </span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+</div>
+<div class="space-y-1.5">
+<!-- BambooHR -->
+<div class="p-2 rounded-lg bg-surface-container-low border border-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded bg-primary/10 flex items-center justify-center text-primary font-bold text-[10px]">B</div>
+<div class="flex flex-col">
+<span class="font-body-sm text-[12px] font-semibold text-on-surface">BambooHR</span>
+<span class="font-label-mono text-[9px] text-secondary">Live Sync · 2m ago</span>
+</div>
+</div>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+<!-- Slack Directory -->
+<div class="p-2 rounded-lg bg-surface-container-low/70 border border-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded bg-surface-container-high flex items-center justify-center text-on-surface font-bold text-[10px]">#</div>
+<div class="flex flex-col">
+<span class="font-body-sm text-[12px] font-semibold text-on-surface">Slack Direct Graph</span>
+<span class="font-label-mono text-[9px] text-secondary">Metadata active</span>
+</div>
+</div>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+<!-- Greenhouse ATS -->
+<div class="p-2 rounded-lg bg-surface-container-low/70 border border-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded bg-surface-container-high flex items-center justify-center text-on-surface font-bold text-[10px]">G</div>
+<div class="flex flex-col">
+<span class="font-body-sm text-[12px] font-semibold text-on-surface">Greenhouse ATS</span>
+<span class="font-label-mono text-[9px] text-secondary">42 open reqs</span>
+</div>
+</div>
+<span class="w-2 h-2 rounded-full bg-surface-dim"></span>
+</div>
+<!-- CSV Import Action -->
+<button class="w-full py-1.5 px-2 rounded-lg border border-dashed border-outline-variant hover:border-primary text-secondary hover:text-on-surface font-label-mono text-[11px] flex items-center justify-center gap-1.5 bg-surface transition-colors">
+<span class="material-symbols-outlined text-[13px]">upload_file</span>
+<span>Upload CSV Dataset</span>
+</button>
+</div>
+</div>
+<!-- Section 2: Structural Layers Filter -->
+<div class="flex flex-col gap-2.5 pt-3 border-t border-surface-container-highest">
+<div class="flex items-center justify-between font-label-mono text-[10px] text-secondary uppercase tracking-wider">
+<span class="font-semibold text-secondary">Structural Layers</span>
+<span class="font-label-mono text-[10px] text-secondary">Visible</span>
+</div>
+<div class="space-y-1.5 font-label-mono text-label-mono">
+<label class="flex items-center justify-between p-1.5 rounded hover:bg-surface-container-low cursor-pointer">
+<div class="flex items-center gap-2">
+<input checked="" class="rounded border-outline-variant text-primary focus:ring-primary w-3.5 h-3.5 accent-primary" type="checkbox"/>
+<span class="font-medium text-on-surface">C-Suite (L1)</span>
+</div>
+<span class="text-[10px] px-1 py-0.2 rounded bg-surface-container text-secondary">6 roles</span>
+</label>
+<label class="flex items-center justify-between p-1.5 rounded hover:bg-surface-container-low cursor-pointer">
+<div class="flex items-center gap-2">
+<input checked="" class="rounded border-outline-variant text-primary focus:ring-primary w-3.5 h-3.5 accent-primary" type="checkbox"/>
+<span class="font-medium text-on-surface">VP / Directors (L2)</span>
+</div>
+<span class="text-[10px] px-1 py-0.2 rounded bg-surface-container text-secondary">24 roles</span>
+</label>
+<label class="flex items-center justify-between p-1.5 rounded hover:bg-surface-container-low cursor-pointer">
+<div class="flex items-center gap-2">
+<input checked="" class="rounded border-outline-variant text-primary focus:ring-primary w-3.5 h-3.5 accent-primary" type="checkbox"/>
+<span class="font-medium text-on-surface">Managers / Leads (L3)</span>
+</div>
+<span class="text-[10px] px-1 py-0.2 rounded bg-surface-container text-secondary">112 roles</span>
+</label>
+<label class="flex items-center justify-between p-1.5 rounded hover:bg-surface-container-low cursor-pointer">
+<div class="flex items-center gap-2">
+<input checked="" class="rounded border-outline-variant text-primary focus:ring-primary w-3.5 h-3.5 accent-primary" type="checkbox"/>
+<span class="font-medium text-on-surface">Individual Contributors (L4)</span>
+</div>
+<span class="text-[10px] px-1 py-0.2 rounded bg-surface-container text-secondary">1,098</span>
+</label>
+</div>
+</div>
+<!-- Section 3: Color Coding Modes -->
+<div class="flex flex-col gap-2 pt-3 border-t border-surface-container-highest">
+<span class="font-label-mono text-[10px] text-secondary uppercase tracking-wider font-semibold">Color Coding Mode</span>
+<div class="grid grid-cols-1 gap-1 font-label-mono text-[11px]">
+<button class="px-2.5 py-1.5 rounded-lg text-left bg-surface-container font-semibold text-on-surface flex items-center justify-between border-l-2 border-primary">
+<span>By Cost Center</span>
+<span class="material-symbols-outlined text-[13px] text-primary">check</span>
+</button>
+<button class="px-2.5 py-1.5 rounded-lg text-left text-secondary hover:bg-surface-container-low hover:text-on-surface transition-colors flex items-center justify-between">
+<span>By Level Hierarchy</span>
+</button>
+<button class="px-2.5 py-1.5 rounded-lg text-left text-secondary hover:bg-surface-container-low hover:text-on-surface transition-colors flex items-center justify-between">
+<span class="flex items-center gap-1.5">
+<span>By Risk &amp; Span Flag</span>
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+</span>
+</button>
+</div>
+</div>
+<!-- Section 4: Layout Controls & Toggles -->
+<div class="flex flex-col gap-2 pt-3 border-t border-surface-container-highest mt-auto">
+<span class="font-label-mono text-[10px] text-secondary uppercase tracking-wider font-semibold">Layout Orientation</span>
+<div class="space-y-1 font-label-mono text-[11px] text-secondary">
+<div class="flex items-center justify-between py-1">
+<span>Vertical Tree Layout</span>
+<input checked="" class="accent-primary" name="layout_orient" type="radio"/>
+</div>
+<div class="flex items-center justify-between py-1">
+<span>Horizontal Matrix Grid</span>
+<input class="accent-primary" name="layout_orient" type="radio"/>
+</div>
+<div class="flex items-center justify-between py-1 pt-1.5 border-t border-surface-container">
+<span>Collapse Inactive Layers</span>
+<input checked="" class="accent-primary rounded" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<!-- 2B. CENTER VISUAL ORG CANVAS (55% width -> lg:col-span-6 xl:col-span-7) -->
+<div class="lg:col-span-6 xl:col-span-7 flex flex-col bg-surface overflow-hidden relative border-r border-surface-container-highest">
+<!-- Natural Language Command Bar at Top of Canvas -->
+<div class="p-3 bg-surface-container-lowest border-b border-surface-container-highest z-20 flex items-center gap-2">
+<div class="relative flex-1 flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[18px] text-primary">auto_awesome</span>
+<input class="w-full h-9 pl-9 pr-3 rounded-lg bg-surface-container-low border border-primary/40 focus:border-primary text-body-sm font-code-md text-on-surface font-medium text-[12px] shadow-xs focus:outline-none" type="text" value="✨ Agent Command: 'Flatten product engineering by one layer and balance spans to 6'"/>
+</div>
+<button class="h-9 px-3.5 rounded-lg bg-inverse-surface hover:bg-black text-inverse-on-surface font-label-mono text-label-mono font-semibold flex items-center gap-1.5 transition-all active:scale-95 whitespace-nowrap">
+<span>Run Command</span>
+<span class="material-symbols-outlined text-[14px] text-primary-container">arrow_forward</span>
+</button>
+</div>
+<!-- Canvas Surface Header Floating Toolbar -->
+<div class="absolute top-16 right-4 z-20 flex items-center gap-1 bg-surface-container-lowest/90 backdrop-blur-xs p-1 rounded-lg border border-surface-container-highest shadow-sm text-secondary font-label-mono text-[11px]">
+<button class="p-1 hover:text-on-surface rounded hover:bg-surface-container" title="Zoom In"><span class="material-symbols-outlined text-[16px]">add</span></button>
+<span class="px-1.5 font-medium text-on-surface">100%</span>
+<button class="p-1 hover:text-on-surface rounded hover:bg-surface-container" title="Zoom Out"><span class="material-symbols-outlined text-[16px]">remove</span></button>
+<span class="w-px h-3 bg-surface-container-highest mx-0.5"></span>
+<button class="p-1 hover:text-on-surface rounded hover:bg-surface-container" title="Pan Canvas"><span class="material-symbols-outlined text-[16px]">pan_tool</span></button>
+<button class="p-1 hover:text-on-surface rounded hover:bg-surface-container" title="Snap to Grid"><span class="material-symbols-outlined text-[16px] text-primary">grid_3x3</span></button>
+<button class="p-1 hover:text-on-surface rounded hover:bg-surface-container" title="Reset View"><span class="material-symbols-outlined text-[16px]">restart_alt</span></button>
+</div>
+<!-- Interactive Canvas Area (Grid dotted background + SVG Connections + Interactive Nodes) -->
+<div class="flex-1 w-full p-8 overflow-auto flex flex-col items-center relative" style="background-image: radial-gradient(#d9dadc 1px, transparent 1px); background-size: 20px 20px;">
+<!-- SVG Connection Overlay Lines -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" style="min-height: 720px; min-width: 700px;">
+<defs>
+<marker id="dotHead" markerheight="6" markerwidth="6" refx="3" refy="3">
+<circle cx="3" cy="3" fill="#2b6c00" r="2.5"></circle>
+</marker>
+</defs>
+<!-- Line: CEO to CTO (Solid direct hierarchy line) -->
+<path d="M 370 125 L 370 160 L 260 160 L 260 190" fill="none" stroke="#6e7b63" stroke-width="2"></path>
+<!-- Line: CEO to other branch placeholder -->
+<path d="M 370 160 L 510 160 L 510 190" fill="none" stroke="#bdcbaf" stroke-dasharray="3 3" stroke-width="1.5"></path>
+<!-- Line: CTO to VP Product & Platform (Solid line) -->
+<path d="M 260 285 L 260 325" fill="none" stroke="#6e7b63" stroke-width="2"></path>
+<!-- Line: VP Product to Head of Core Banking (Solid line) -->
+<path d="M 260 435 L 260 480" fill="none" stroke="#6e7b63" stroke-width="2"></path>
+<!-- Line: AI & Automation Guild Lead (Matrix Dotted-Line connecting across CTO & Product) -->
+<path d="M 530 350 C 460 350, 410 375, 362 375" fill="none" marker-end="url(#dotHead)" stroke="#2b6c00" stroke-dasharray="4 4" stroke-width="2"></path>
+</svg>
+<!-- Hierarchy Node Structure -->
+<div class="flex flex-col items-center gap-9 z-10 w-full max-w-2xl pt-2">
+<!-- LEVEL 1: CEO NODE -->
+<div class="relative group">
+<div class="w-80 rounded-xl bg-surface-container-lowest border-2 border-primary shadow-sm hover:shadow-md transition-all p-3 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-[9px] px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-semibold tracking-wider uppercase">L1 · Executive</span>
+<span class="font-label-mono text-[10px] text-primary bg-primary-container/20 px-1.5 py-0.5 rounded font-bold">Cost Center: 1000</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-inverse-surface text-inverse-on-surface font-headline-sm flex items-center justify-center font-bold text-[14px] border border-primary">
+                  TM
+                </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-body-md font-semibold text-on-surface">Dr. Tariq Al-Mansoor</span>
+<span class="material-symbols-outlined text-primary text-[15px]">verified</span>
+</div>
+<span class="font-body-sm text-[12px] text-secondary font-medium">Chief Executive Officer</span>
+</div>
+</div>
+<div class="pt-2 border-t border-surface-container flex items-center justify-between font-label-mono text-[10px] text-secondary">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">groups</span>
+                  6 Direct Reports
+                </span>
+<span class="font-medium text-on-surface">Span Index: Balanced</span>
+</div>
+</div>
+<!-- Node Connector Pin -->
+<div class="w-2.5 h-2.5 rounded-full bg-primary mx-auto -mb-1 mt-1 border-2 border-white"></div>
+</div>
+<!-- LEVEL 2: CTO NODE (+ Secondary Department Outline) -->
+<div class="grid grid-cols-2 gap-16 w-full justify-items-center">
+<!-- CTO Node (Active Line) -->
+<div class="relative group">
+<div class="w-76 rounded-xl bg-surface-container-lowest border border-surface-container-highest hover:border-primary shadow-sm transition-all p-3 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-[9px] px-1.5 py-0.5 rounded bg-surface-container text-secondary font-semibold uppercase">L2 · Technology</span>
+<span class="font-label-mono text-[9px] text-primary font-bold flex items-center gap-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Low Risk
+                  </span>
+</div>
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold text-[12px]">
+                    SA
+                  </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-sm font-semibold text-on-surface">Chief Technology Officer</span>
+<span class="font-body-sm text-[11px] text-secondary">Sultan Al-Otaibi</span>
+</div>
+</div>
+<div class="pt-1.5 border-t border-surface-container grid grid-cols-2 gap-1 font-label-mono text-[10px] text-secondary">
+<div>4 Direct Reports</div>
+<div class="text-right font-medium text-on-surface">Budget: $24M</div>
+</div>
+</div>
+</div>
+<!-- Placeholder Branch: Chief Commercial Officer (Dimmed) -->
+<div class="w-68 rounded-xl bg-surface-container-lowest/70 border border-dashed border-outline-variant p-3 flex flex-col gap-2 opacity-80">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-[9px] px-1.5 py-0.5 rounded bg-surface-container text-secondary font-semibold uppercase">L2 · Commercial</span>
+<span class="font-label-mono text-[9px] text-secondary">Branch Folded</span>
+</div>
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-secondary flex items-center justify-center font-bold text-[11px]">
+                  NH
+                </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[12px] font-semibold text-on-surface">Chief Commercial Officer</span>
+<span class="font-body-sm text-[10px] text-secondary">Noura Hashim · 5 Reports</span>
+</div>
+</div>
+</div>
+</div>
+<!-- LEVEL 3: VP PRODUCT (WITH SPAN OF CONTROL ALERT) + MATRIX GUILD LEAD -->
+<div class="grid grid-cols-2 gap-10 w-full items-start">
+<!-- VP Product & Platform (SELECTED & TARGET FOR AI RECOMMENDATION) -->
+<div class="relative group justify-self-center">
+<div class="w-80 rounded-xl bg-surface-container-lowest border-2 border-primary shadow-md ring-2 ring-primary/20 p-3.5 flex flex-col gap-2 relative">
+<!-- Span of Control Alert Badge -->
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-[9px] px-1.5 py-0.5 rounded bg-primary-container text-on-primary-fixed font-bold uppercase">L3 · Selected Node</span>
+<!-- ALERT PILL -->
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-mono text-[10px] font-bold flex items-center gap-1 border border-error/20 animate-pulse">
+<span class="material-symbols-outlined text-[13px]">warning</span>
+                    SPAN ALERT: 11 / 7
+                  </span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-inverse-surface text-primary-container font-bold flex items-center justify-center text-[13px] border border-primary">
+                    VP
+                  </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md font-semibold text-on-surface">VP Product &amp; Platform</span>
+<span class="font-body-sm text-[12px] text-secondary">Kareem Zaid (Cost Center 4000)</span>
+</div>
+</div>
+<!-- Span Metrics Bar -->
+<div class="p-2 rounded bg-error-container/20 border border-error/20 flex flex-col gap-1">
+<div class="flex justify-between font-label-mono text-[10px]">
+<span class="text-error font-semibold">Over-leveraged Span (11 Directs)</span>
+<span class="text-secondary font-medium">Optimal: 5-7</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-error h-full" style="width: 88%"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-surface-container font-label-mono text-[10px] text-secondary">
+<span>Comp: $285k/yr</span>
+<span class="text-primary font-semibold">12 Sub-Teams Assigned</span>
+</div>
+</div>
+</div>
+<!-- Node: AI & Automation Guild Lead (Matrix dotted-line connected) -->
+<div class="w-72 rounded-xl bg-surface-container-lowest border-2 border-dashed border-primary p-3 flex flex-col gap-2 shadow-sm justify-self-center">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-[9px] px-1.5 py-0.5 rounded bg-primary-container text-on-primary-fixed font-bold uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[11px]">hub</span>
+                  Matrix Guild
+                </span>
+<span class="font-label-mono text-[10px] text-primary font-semibold">Dotted-Line</span>
+</div>
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-fixed flex items-center justify-center font-bold text-[11px]">
+                  AI
+                </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-sm font-semibold text-on-surface">AI &amp; Automation Guild Lead</span>
+<span class="font-body-sm text-[11px] text-secondary">Dr. Layla Mansour</span>
+</div>
+</div>
+<div class="pt-1.5 border-t border-surface-container font-label-mono text-[10px] text-secondary flex items-center justify-between">
+<span>Direct: CTO (L2)</span>
+<span class="text-primary font-medium">Dotted: VP Product</span>
+</div>
+</div>
+</div>
+<!-- LEVEL 4: HEAD OF CORE BANKING & DRAG-AND-DROP PLACEHOLDER -->
+<div class="grid grid-cols-2 gap-10 w-full items-start">
+<!-- Head of Core Banking (L4) -->
+<div class="w-80 rounded-xl bg-surface-container-lowest border border-surface-container-highest hover:border-primary shadow-sm p-3 flex flex-col gap-2 justify-self-center">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-[9px] px-1.5 py-0.5 rounded bg-surface-container text-secondary font-semibold uppercase">L4 · Operations</span>
+<span class="font-label-mono text-[10px] text-secondary font-semibold">Cost Center: 4021</span>
+</div>
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-semibold text-[11px]">
+                  CB
+                </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-sm font-semibold text-on-surface">Head of Core Banking</span>
+<span class="font-body-sm text-[11px] text-secondary">Fahad Al-Hussaini</span>
+</div>
+</div>
+<div class="pt-1.5 border-t border-surface-container flex items-center justify-between font-label-mono text-[10px]">
+<span class="text-primary font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">checklist</span>
+                  KPIs: 5 Auto-Drafted
+                </span>
+<button class="text-secondary hover:text-on-surface underline">View details</button>
+</div>
+</div>
+<!-- Drag-and-drop placeholder: "+ Add Role / Drop Node Here" -->
+<div class="w-72 border-2 border-dashed border-outline-variant hover:border-primary rounded-xl p-4 flex flex-col items-center justify-center gap-1.5 text-center cursor-pointer bg-surface-container-low/50 hover:bg-surface-container-low transition-colors justify-self-center min-h-[105px]">
+<div class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</div>
+<span class="font-label-mono text-label-mono font-semibold text-on-surface">+ Add Role / Drop Node Here</span>
+<span class="font-label-mono text-[9px] text-secondary">Drag from sidebar or press Tab</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 2C. RIGHT INSPECTOR & AI ADVISORY PANEL (25% width -> lg:col-span-3 xl:col-span-3) -->
+<div class="lg:col-span-3 xl:col-span-3 bg-surface-container-lowest border-l border-surface-container-highest flex flex-col h-full select-none overflow-y-auto">
+<!-- Panel Header & Tabs -->
+<div class="border-b border-surface-container-highest bg-surface-container-low/40 p-2">
+<div class="grid grid-cols-3 gap-1 bg-surface-container p-0.5 rounded-lg text-center font-label-mono text-[10px]">
+<button class="py-1.5 px-1 rounded bg-surface-container-lowest text-on-surface font-semibold shadow-xs">
+            1. Intelligence
+          </button>
+<button class="py-1.5 px-1 rounded text-secondary hover:text-on-surface transition-colors font-medium">
+            2. Roles &amp; KPIs
+          </button>
+<button class="py-1.5 px-1 rounded text-secondary hover:text-on-surface transition-colors font-medium">
+            3. Versions
+          </button>
+</div>
+</div>
+<!-- Tab Content Area -->
+<div class="p-4 flex flex-col gap-5 flex-1 overflow-y-auto">
+<!-- TAB 1 CONTENT: AI STRUCTURAL INTELLIGENCE & GAP ANALYSIS -->
+<div class="flex flex-col gap-3.5">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-[11px] font-semibold text-on-surface uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-primary">psychology</span>
+              AI Structural Advisory
+            </span>
+<span class="px-1.5 py-0.5 rounded bg-primary-container text-on-primary-fixed font-label-mono text-[9px] font-bold">2 FLAGS</span>
+</div>
+<!-- Real-time Span Warning Card -->
+<div class="p-3 rounded-xl bg-error-container/20 border border-error/30 flex flex-col gap-2">
+<div class="flex items-center gap-1.5 text-error font-headline-sm text-body-sm font-semibold">
+<span class="material-symbols-outlined text-[18px]">error</span>
+              Span of Control Bottleneck
+            </div>
+<p class="font-body-sm text-[12px] text-on-surface leading-relaxed">
+<strong>Warning:</strong> VP Product has <strong>11 direct reports</strong> (recommended max 7 for strategic tier). High risk of sprint decision latency.
+            </p>
+<div class="p-2 rounded bg-surface-container-lowest border border-error/20 flex flex-col gap-1.5">
+<span class="font-label-mono text-[10px] text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">auto_fix_high</span>
+                AI Remediation Heuristic:
+              </span>
+<p class="font-body-sm text-[11px] text-secondary">
+                Introduce a new <em>Director of Core Platform</em> role to distribute 5 foundational infrastructure teams.
+              </p>
+<button class="mt-1 py-1 px-2 rounded bg-primary hover:brightness-110 text-on-primary font-label-mono text-[10px] font-semibold flex items-center justify-center gap-1">
+<span>Apply Auto-Split Node</span>
+</button>
+</div>
+</div>
+<!-- Overlapping Accountabilities Card -->
+<div class="p-3 rounded-xl bg-surface-container-low border border-surface-container-highest flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-body-sm font-semibold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-amber-600">copy_all</span>
+                Overlapping Accountabilities
+              </span>
+<span class="font-label-mono text-[9px] px-1.5 py-0.2 rounded bg-surface-container text-secondary">88% Match</span>
+</div>
+<p class="font-body-sm text-[12px] text-secondary leading-snug">
+              2 duplicate roles detected between <strong>Digital Hub</strong> and <strong>Core Banking</strong> (Payment Gateway Integration Lead).
+            </p>
+<div class="flex items-center gap-2 pt-1 font-label-mono text-[10px]">
+<button class="text-primary hover:underline font-semibold flex items-center gap-0.5">
+<span>Merge &amp; Rationalize</span>
+<span class="material-symbols-outlined text-[12px]">merge</span>
+</button>
+<span class="text-secondary-fixed-dim">|</span>
+<button class="text-secondary hover:text-on-surface">Dismiss flag</button>
+</div>
+</div>
+</div>
+<!-- TAB 2 PREVIEW: ROLE & KPI AUTO-DRAFTING -->
+<div class="flex flex-col gap-3 pt-3 border-t border-surface-container-highest">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-[11px] font-semibold text-on-surface uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-primary">edit_note</span>
+              Role &amp; KPI Auto-Drafting
+            </span>
+<span class="font-label-mono text-[10px] text-secondary">VP Product</span>
+</div>
+<!-- Job Spec Snapshot -->
+<div class="p-2.5 rounded-lg bg-surface-container-low border border-surface-container flex flex-col gap-1.5">
+<div class="flex justify-between items-center font-label-mono text-[10px] text-secondary">
+<span class="uppercase">Job Description (Auto-Drafted)</span>
+<span class="text-primary font-medium">Heuristic L3 Model</span>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface line-clamp-2">
+              Responsible for enterprise API architecture, cloud microservices reliability, and multi-tenant banking platform compliance.
+            </p>
+</div>
+<!-- 5 Auto-Generated KPIs -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-mono text-[10px] text-secondary uppercase font-semibold">5 Tailored Generated KPIs</span>
+<div class="space-y-1 font-label-mono text-[11px]">
+<div class="p-1.5 rounded bg-surface-container flex items-center justify-between">
+<span class="text-on-surface">1. Time-to-market acceleration</span>
+<span class="text-primary font-bold">-20% MoM</span>
+</div>
+<div class="p-1.5 rounded bg-surface-container flex items-center justify-between">
+<span class="text-on-surface">2. Platform reliability SLA</span>
+<span class="text-primary font-bold">99.95%</span>
+</div>
+<div class="p-1.5 rounded bg-surface-container flex items-center justify-between">
+<span class="text-on-surface">3. Key engineering talent retention</span>
+<span class="text-primary font-bold">&gt;90%</span>
+</div>
+<div class="p-1.5 rounded bg-surface-container flex items-center justify-between">
+<span class="text-on-surface">4. Cloud infrastructure unit cost</span>
+<span class="text-primary font-bold">-14%</span>
+</div>
+<div class="p-1.5 rounded bg-surface-container flex items-center justify-between">
+<span class="text-on-surface">5. Regulatory audit findings</span>
+<span class="text-primary font-bold">Zero P0</span>
+</div>
+</div>
+</div>
+<!-- Competencies -->
+<div class="flex flex-wrap gap-1 pt-1 font-label-mono text-[10px]">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface">System Architecture</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface">Agile Transformation</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface">FinTech Governance</span>
+</div>
+</div>
+<!-- TAB 3: VERSION CONTROL & DELIVERABLES -->
+<div class="flex flex-col gap-3 pt-3 border-t border-surface-container-highest mt-auto">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-[11px] font-semibold text-on-surface uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-secondary">history</span>
+              Version Audit History
+            </span>
+</div>
+<div class="space-y-1.5 font-label-mono text-[11px]">
+<div class="p-2 rounded bg-surface-container-low border border-surface-container flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">v1.4 - Flattened Eng &amp; Spans</span>
+<span class="text-[9px] text-secondary">10m ago · Agent Synthesized</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+<div class="p-2 rounded bg-surface-container-low/60 border border-surface-container flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">v1.3 - Initial BambooHR import</span>
+<span class="text-[9px] text-secondary">2h ago · System Ingest</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-surface-dim"></span>
+</div>
+</div>
+<!-- One-Click Deliverable Generator Button -->
+<button class="w-full mt-1 py-2.5 px-3 rounded-lg bg-primary hover:brightness-110 active:scale-98 text-on-primary font-body-sm text-body-sm font-semibold flex items-center justify-center gap-2 shadow-sm transition-all">
+<span class="material-symbols-outlined text-[17px]">present_to_all</span>
+<span>Package Client Deliverable</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div></main></div>
+</body></html>

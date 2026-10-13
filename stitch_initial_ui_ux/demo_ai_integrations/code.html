@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-lowest": "#ffffff", "inverse-surface": "#2f3132", "on-error": "#ffffff", "surface-bright": "#f9f9fb", "outline": "#6e7b63", "secondary-fixed-dim": "#c7c6ca", "surface-dim": "#d9dadc", "outline-variant": "#bdcbaf", "on-secondary-container": "#626266", "on-secondary-fixed": "#1b1b1f", "on-primary-container": "#2e7200", "on-primary-fixed-variant": "#1f5100", "on-secondary": "#ffffff", "on-tertiary-fixed-variant": "#44474e", "primary": "#2b6c00", "error-container": "#ffdad6", "on-background": "#1a1c1d", "on-secondary-fixed-variant": "#46464a", "secondary-fixed": "#e3e2e6", "error": "#ba1a1a", "on-primary-fixed": "#082100", "primary-fixed": "#7fff36", "tertiary-container": "#dfe1ea", "on-error-container": "#93000a", "on-surface": "#1a1c1d", "secondary-container": "#e0dfe3", "surface": "#f9f9fb", "background": "#f9f9fb", "surface-container": "#eeeef0", "surface-container-high": "#e8e8ea", "primary-container": "#72ff13", "surface-container-low": "#f3f3f5", "on-primary": "#ffffff", "on-tertiary-fixed": "#181c22", "primary-fixed-dim": "#61e200", "inverse-on-surface": "#f0f0f2", "inverse-primary": "#61e200", "surface-tint": "#2b6c00", "surface-variant": "#e2e2e4", "on-tertiary-container": "#61646c", "surface-container-highest": "#e2e2e4", "on-tertiary": "#ffffff", "secondary": "#5e5e62", "tertiary-fixed-dim": "#c4c6cf", "tertiary-fixed": "#e0e2eb", "tertiary": "#5b5e66", "on-surface-variant": "#3e4b35" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-sm": "0.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "gutter-mobile": "0.75rem", "margin-mobile": "1rem", "space-xl": "2.5rem", "margin": "3rem", "space-md": "1rem", "gutter": "1.5rem" }, "fontFamily": { "headline-sm": ["Inter"], "headline-lg": ["Inter"], "headline-xl": ["Inter"], "metric-display": ["JetBrains Mono"], "headline-lg-mobile": ["Inter"], "body-md": ["Inter"], "label-mono": ["JetBrains Mono"], "headline-md": ["Inter"], "body-sm": ["Inter"], "headline-xl-mobile": ["Inter"], "code-md": ["JetBrains Mono"], "body-lg": ["Inter"] }, "fontSize": { "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "500" }], "headline-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "metric-display": ["32px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "500" }], "headline-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "500" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "label-mono": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "500" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "code-md": ["13px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }] } } } }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed top-0 h-screen w-72 bg-surface-container-lowest border-surface-container-highest z-50 flex flex-col justify-between select-none left-0 border-r"><div class="flex flex-col flex-1"><div class="h-16 px-space-md border-b border-surface-container-highest flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-6 h-6 rounded-lg bg-inverse-surface flex items-center justify-center"><div class="w-2 h-2 rounded bg-primary-container animate-pulse"></div></div><div class="flex flex-col"><span class="font-headline-sm text-body-md font-semibold tracking-tight text-on-surface">Demo AI</span><span class="font-label-mono text-label-mono text-secondary">AGENTIC QA ENGINE</span></div></div><span class="font-label-mono text-label-mono px-1.5 py-0.5 rounded bg-surface-container text-secondary border border-surface-container-highest">v0.1</span></div><div class="p-space-sm flex flex-col flex-1"><nav class="flex flex-col gap-1 mt-1" data-active-classes="bg-surface-container text-on-surface font-medium border-r-2 border-primary"><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-secondary hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="home" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">grid_view</span>Home</span><span class="font-label-mono text-label-mono opacity-60">01</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-secondary hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="charts" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">insights</span>Charts</span><span class="font-label-mono text-label-mono opacity-60">02</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-secondary hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="ai-agents" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">smart_toy</span>AI Agents</span><span class="font-label-mono text-label-mono px-1 py-0.2 bg-primary-container text-on-primary-fixed rounded text-[9px]">8 FLEET</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-secondary hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="knowledge-hub" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">neurology</span>Knowledge Hub</span><span class="font-label-mono text-label-mono opacity-60">04</span></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-2 rounded-lg transition-colors bg-surface-container text-on-surface font-medium border-r-2 border-primary" data-path="integrations" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">hub</span>Integrations</span><span class="font-label-mono text-label-mono text-primary font-semibold">05</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-secondary hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="settings" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">tune</span>Settings</span><span class="font-label-mono text-label-mono opacity-60">06</span></a></nav><div class="p-2.5 rounded-lg bg-surface-container-low border border-surface-container-highest flex flex-col gap-2 mt-auto"><div class="flex items-center justify-between"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[15px] text-secondary">account_balance_wallet</span><span class="font-label-mono text-[10px] text-secondary uppercase tracking-wider font-medium">Usage &amp; Credits</span></div><button class="flex items-center gap-0.5 text-primary hover:text-on-surface font-label-mono text-[10px] font-semibold transition-colors group" title="Add Credits"><span class="material-symbols-outlined text-[14px] group-hover:scale-110 transition-transform">add</span><span class="">Add</span></button></div><div class="flex items-baseline justify-between"><div class="flex items-baseline gap-1"><span class="font-metric-display text-[16px] text-on-surface font-semibold tracking-tight">$428.50</span><span class="font-label-mono text-[11px] text-secondary font-normal">/ $600</span></div><span class="font-label-mono text-[10px] px-1.5 py-0.2 rounded bg-surface-container text-secondary font-medium">71% used</span></div><div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden"><div class="bg-primary-container h-full rounded-full" style="width: 71.4%;"></div></div><div class="grid grid-cols-2 gap-2 pt-1 border-t border-surface-container-high/60 font-label-mono text-[10px] text-secondary"><div><span class="block text-[9px] uppercase tracking-wider text-tertiary">Daily</span><span class="font-medium text-on-surface text-[11px]">$34.20</span></div><div class="text-right"><span class="block text-[9px] uppercase tracking-wider text-tertiary">Weekly</span><span class="font-medium text-on-surface text-[11px]">$218.40</span></div></div></div></div></div><div class="p-space-sm border-t border-surface-container-highest flex flex-col gap-space-sm"><div class="flex items-center justify-between px-1"><div class="flex items-center gap-2"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col"><span class="font-body-sm text-body-sm font-medium leading-none text-on-surface">lead-eng@demo</span></div></div><div class="flex items-center gap-2 text-secondary"><span class="material-symbols-outlined text-[18px] hover:text-on-surface cursor-pointer" title="Account Settings">settings</span><span class="material-symbols-outlined text-[18px] hover:text-on-surface cursor-pointer" title="Logout">logout</span></div></div></div></aside><div class="" style="padding-left: 18rem;"><header class="fixed top-0 h-16 bg-surface-container-lowest/90 backdrop-blur-md border-b border-surface-container-highest z-40 px-space-md flex items-center justify-between right-0" style="left: 18rem;"><div class="flex-1 flex justify-center max-w-xl mx-auto"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-3 text-[18px] text-secondary">search</span><input class="w-full h-[38px] pl-9 pr-14 rounded-lg bg-surface-container-low border border-surface-container-highest text-body-sm font-body-sm text-on-surface placeholder:text-secondary focus:outline-none focus:border-primary-container transition-colors" placeholder="Find integrations, webhooks, API keys... (Cmd+K)" type="text"/><span class="absolute right-2.5 font-label-mono text-[10px] px-1.5 py-0.5 rounded bg-surface-container-high text-secondary border border-surface-container-highest select-none pointer-events-none">⌘K</span></div></div><div class="flex items-center gap-space-sm"><button class="h-9 px-3 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm text-body-sm font-medium flex items-center gap-1.5 border border-surface-container-highest transition-colors"><span class="material-symbols-outlined text-[16px] text-secondary">menu_book</span><span class="font-label-mono text-label-mono">API Docs</span></button><button class="h-9 px-3.5 rounded-lg bg-primary-container hover:brightness-105 active:scale-95 transition-all text-on-primary-fixed font-body-sm text-body-sm font-semibold flex items-center gap-1.5 shadow-[0_1px_4px_rgba(0,0,0,0.06)]"><span class="material-symbols-outlined text-[18px]">add</span><span class="">Add Integration</span></button></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Command & Header Ribbon -->
+<section class="w-full bg-surface-container-lowest px-space-lg py-space-md shadow-sm border-b border-surface-container-highest">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 font-label-mono text-label-mono text-secondary">
+<span class="hover:text-on-surface cursor-pointer transition-colors">Integrations</span>
+<span class="text-tertiary">/</span>
+<span class="text-on-surface font-medium tracking-wide">Workforce Data, Documents &amp; Communication Connectors</span>
+</div>
+<h1 class="font-headline-sm text-[22px] font-semibold text-on-surface tracking-tight mt-0.5">Integrations &amp; Toolchain Ecosystem</h1>
+<div class="flex flex-wrap items-center gap-2 mt-1">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-low border border-surface-container-highest font-label-mono text-label-mono text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          3 Categories Configured
+        </span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-low border border-surface-container-highest font-label-mono text-label-mono text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+          12 Connected Ingestors
+        </span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-low border border-surface-container-highest font-label-mono text-label-mono text-primary font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+          Sync Health: 100% Optimal
+        </span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-start lg:self-center">
+<button class="h-9 px-3.5 rounded-lg bg-primary-container hover:brightness-105 active:scale-95 transition-all text-on-primary-fixed font-body-sm text-[13px] font-semibold flex items-center gap-1.5 shadow-[0_1px_4px_rgba(0,0,0,0.06)]">
+<span class="material-symbols-outlined text-[18px]">add_link</span>
+<span>+ Add Custom Webhook / API Connector</span>
+</button>
+</div>
+</div>
+</section>
+<div class="px-space-lg py-space-lg flex flex-col gap-space-lg">
+<!-- Category Filters / Tabs -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 border-b border-surface-container-highest">
+<button class="px-3.5 py-2 rounded-t-lg bg-surface-container text-on-surface font-label-mono text-label-mono font-semibold border-b-2 border-primary -mb-[1px]">All Integrations (12)</button>
+<button class="px-3.5 py-2 rounded-t-lg text-secondary hover:text-on-surface hover:bg-surface-container-low font-label-mono text-label-mono transition-colors">Data Inputs: HRIS &amp; Spreadsheets (4)</button>
+<button class="px-3.5 py-2 rounded-t-lg text-secondary hover:text-on-surface hover:bg-surface-container-low font-label-mono text-label-mono transition-colors">Document Storage &amp; RAG Sync (4)</button>
+<button class="px-3.5 py-2 rounded-t-lg text-secondary hover:text-on-surface hover:bg-surface-container-low font-label-mono text-label-mono transition-colors">Real-Time Comms &amp; Alerts (4)</button>
+</div>
+<!-- SECTION 1: Automated Workforce Data Ingestors (HRIS & Spreadsheets) -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">badge</span>
+<h2 class="font-headline-sm text-[17px] font-semibold text-on-surface">Automated Workforce Data Ingestors (HRIS &amp; Spreadsheets)</h2>
+</div>
+<span class="font-label-mono text-[11px] text-secondary">Personnel, hierarchy &amp; custom metadata for auto-generating baseline org charts</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1: BambooHR -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm border border-surface-container-highest flex flex-col justify-between hover:shadow-md transition-shadow group">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center font-bold text-on-surface text-[14px] font-label-mono">BHR</div>
+<div>
+<h3 class="font-headline-sm text-[15px] font-semibold text-on-surface group-hover:text-primary transition-colors">BambooHR</h3>
+<span class="font-label-mono text-[10px] text-secondary">Core HR &amp; People Data</span>
+</div>
+</div>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-primary-container text-on-primary-fixed font-semibold">Connected</span>
+</div>
+<p class="font-body-sm text-[12.5px] text-secondary mt-3 leading-relaxed">Automated sync of employees, reporting lines, departments &amp; job titles.</p>
+<div class="mt-3 p-2 rounded bg-surface-container-low font-label-mono text-[11px] text-on-surface flex flex-col gap-1">
+<div class="flex items-center justify-between text-secondary">
+<span>Sync State:</span>
+<span class="text-on-surface font-medium">Auto-sync 2h ago</span>
+</div>
+<div class="flex items-center justify-between text-secondary">
+<span>Last Payload:</span>
+<span class="text-primary font-medium">142 employee records</span>
+</div>
+</div>
+</div>
+<div class="mt-3 pt-2.5 border-t border-surface-container-high flex items-center justify-between">
+<span class="font-label-mono text-[10.5px] text-secondary">Daily Webhook</span>
+<button class="px-3 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-[12px] font-medium transition-colors">Configure</button>
+</div>
+</div>
+<!-- Card 2: Workday -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm border border-surface-container-highest flex flex-col justify-between hover:shadow-md transition-shadow group">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center font-bold text-on-surface text-[14px] font-label-mono">WD</div>
+<div>
+<h3 class="font-headline-sm text-[15px] font-semibold text-on-surface group-hover:text-primary transition-colors">Workday</h3>
+<span class="font-label-mono text-[10px] text-secondary">Enterprise HCM Platform</span>
+</div>
+</div>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-primary-container text-on-primary-fixed font-semibold">Connected</span>
+</div>
+<p class="font-body-sm text-[12.5px] text-secondary mt-3 leading-relaxed">Enterprise HRIS sync with multi-entity support and cost center mapping.</p>
+<div class="mt-3 p-2 rounded bg-surface-container-low font-label-mono text-[11px] text-on-surface flex flex-col gap-1">
+<div class="flex items-center justify-between text-secondary">
+<span>Schedule:</span>
+<span class="text-on-surface font-medium">Scheduled nightly</span>
+</div>
+<div class="flex items-center justify-between text-secondary">
+<span>Cost Centers:</span>
+<span class="text-primary font-medium">18 Entities Mapped</span>
+</div>
+</div>
+</div>
+<div class="mt-3 pt-2.5 border-t border-surface-container-high flex items-center justify-between">
+<span class="font-label-mono text-[10.5px] text-secondary">OAuth2 &amp; mTLS</span>
+<button class="px-3 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-[12px] font-medium transition-colors">Configure</button>
+</div>
+</div>
+<!-- Card 3: Microsoft Excel / CSV Import -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm border border-surface-container-highest flex flex-col justify-between hover:shadow-md transition-shadow group">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center font-bold text-on-surface text-[14px] font-label-mono">XLS</div>
+<div>
+<h3 class="font-headline-sm text-[15px] font-semibold text-on-surface group-hover:text-primary transition-colors">Excel / CSV Import</h3>
+<span class="font-label-mono text-[10px] text-secondary">Batch Org Rosters</span>
+</div>
+</div>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-primary-container text-on-primary-fixed font-semibold">Ready / Active</span>
+</div>
+<p class="font-body-sm text-[12.5px] text-secondary mt-3 leading-relaxed">Drag-and-drop batch upload of custom org rosters, compensation bands &amp; tags.</p>
+<div class="mt-3 p-2 rounded bg-surface-container-low font-label-mono text-[11px] text-on-surface flex flex-col gap-1">
+<div class="flex items-center justify-between text-secondary">
+<span>Parser:</span>
+<span class="text-on-surface font-medium">Auto-Schema Detect</span>
+</div>
+<div class="flex items-center justify-between text-secondary">
+<span>Validation:</span>
+<span class="text-primary font-medium">Zero errors in queue</span>
+</div>
+</div>
+</div>
+<div class="mt-3 pt-2.5 border-t border-surface-container-high flex items-center justify-between">
+<span class="font-label-mono text-[10.5px] text-secondary">.xlsx, .csv supported</span>
+<button class="px-3 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-[12px] font-medium transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">upload_file</span>
+<span>Upload New File</span>
+</button>
+</div>
+</div>
+<!-- Card 4: SAP SuccessFactors -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm border border-surface-container-highest flex flex-col justify-between hover:shadow-md transition-shadow group">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center font-bold text-on-surface text-[14px] font-label-mono">SAP</div>
+<div>
+<h3 class="font-headline-sm text-[15px] font-semibold text-on-surface group-hover:text-primary transition-colors">SAP SuccessFactors</h3>
+<span class="font-label-mono text-[10px] text-secondary">Global Personnel Tiers</span>
+</div>
+</div>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-surface-container text-secondary font-medium">Available</span>
+</div>
+<p class="font-body-sm text-[12.5px] text-secondary mt-3 leading-relaxed">Global personnel records, managerial tiers, and compensation modeling.</p>
+<div class="mt-3 p-2 rounded bg-surface-container-low font-label-mono text-[11px] text-on-surface flex flex-col gap-1">
+<div class="flex items-center justify-between text-secondary">
+<span>Endpoint:</span>
+<span class="text-secondary font-medium">Not configured</span>
+</div>
+<div class="flex items-center justify-between text-secondary">
+<span>Status:</span>
+<span class="text-secondary font-medium">Ready for credentials</span>
+</div>
+</div>
+</div>
+<div class="mt-3 pt-2.5 border-t border-surface-container-high flex items-center justify-between">
+<span class="font-label-mono text-[10.5px] text-secondary">OData v4 Connector</span>
+<button class="px-3 py-1 rounded bg-primary-container hover:brightness-105 text-on-primary-fixed font-body-sm text-[12px] font-semibold transition-all flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>Connect</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 2: Automated Document Repository & Continuous RAG Sync -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">folder_special</span>
+<h2 class="font-headline-sm text-[17px] font-semibold text-on-surface">Automated Document Repository &amp; Continuous RAG Sync</h2>
+</div>
+<span class="font-label-mono text-[11px] text-secondary">Monitors storage folders for policies/SOPs and re-indexes them into Knowledge Hub</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 5: Microsoft SharePoint -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm border border-surface-container-highest flex flex-col justify-between hover:shadow-md transition-shadow group">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center font-bold text-on-surface text-[14px] font-label-mono">SP</div>
+<div>
+<h3 class="font-headline-sm text-[15px] font-semibold text-on-surface group-hover:text-primary transition-colors">Microsoft SharePoint</h3>
+<span class="font-label-mono text-[10px] text-secondary">Corporate Policy Library</span>
+</div>
+</div>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-primary-container text-on-primary-fixed font-semibold">Connected</span>
+</div>
+<p class="font-body-sm text-[12.5px] text-secondary mt-3 leading-relaxed">Monitors '/HR-Policies' and '/Corporate-Governance' folders for automatic re-indexing.</p>
+<div class="mt-3 p-2 rounded bg-surface-container-low font-label-mono text-[11px] text-on-surface flex flex-col gap-1">
+<div class="flex items-center justify-between text-secondary">
+<span>Sync Mode:</span>
+<span class="text-on-surface font-medium">Continuous Sync</span>
+</div>
+<div class="flex items-center justify-between text-secondary">
+<span>Monitored:</span>
+<span class="text-primary font-medium">18 Docs Monitored</span>
+</div>
+</div>
+</div>
+<div class="mt-3 pt-2.5 border-t border-surface-container-high flex items-center justify-between">
+<span class="font-label-mono text-[10.5px] text-secondary">Graph API v1.0</span>
+<button class="px-3 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-[12px] font-medium transition-colors">Configure</button>
+</div>
+</div>
+<!-- Card 6: Google Drive -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm border border-surface-container-highest flex flex-col justify-between hover:shadow-md transition-shadow group">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center font-bold text-on-surface text-[14px] font-label-mono">GD</div>
+<div>
+<h3 class="font-headline-sm text-[15px] font-semibold text-on-surface group-hover:text-primary transition-colors">Google Drive</h3>
+<span class="font-label-mono text-[10px] text-secondary">Workspace Shared Drives</span>
+</div>
+</div>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-primary-container text-on-primary-fixed font-semibold">Connected</span>
+</div>
+<p class="font-body-sm text-[12.5px] text-secondary mt-3 leading-relaxed">Synchronizes company drives and Shared Drives for live PDF and DOCX policy ingestion.</p>
+<div class="mt-3 p-2 rounded bg-surface-container-low font-label-mono text-[11px] text-on-surface flex flex-col gap-1">
+<div class="flex items-center justify-between text-secondary">
+<span>Ingestion:</span>
+<span class="text-on-surface font-medium">Real-time Webhook</span>
+</div>
+<div class="flex items-center justify-between text-secondary">
+<span>Monitored:</span>
+<span class="text-primary font-medium">32 Docs Monitored</span>
+</div>
+</div>
+</div>
+<div class="mt-3 pt-2.5 border-t border-surface-container-high flex items-center justify-between">
+<span class="font-label-mono text-[10.5px] text-secondary">Push Notifications</span>
+<button class="px-3 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-[12px] font-medium transition-colors">Configure</button>
+</div>
+</div>
+<!-- Card 7: Notion -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm border border-surface-container-highest flex flex-col justify-between hover:shadow-md transition-shadow group">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center font-bold text-on-surface text-[14px] font-label-mono">NT</div>
+<div>
+<h3 class="font-headline-sm text-[15px] font-semibold text-on-surface group-hover:text-primary transition-colors">Notion</h3>
+<span class="font-label-mono text-[10px] text-secondary">Engineering &amp; Org Charters</span>
+</div>
+</div>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-primary-container text-on-primary-fixed font-semibold">Connected</span>
+</div>
+<p class="font-body-sm text-[12.5px] text-secondary mt-3 leading-relaxed">Syncs internal engineering handbooks, leveling rubrics, and organizational charters.</p>
+<div class="mt-3 p-2 rounded bg-surface-container-low font-label-mono text-[11px] text-on-surface flex flex-col gap-1">
+<div class="flex items-center justify-between text-secondary">
+<span>Workspace:</span>
+<span class="text-on-surface font-medium">Internal Handbook</span>
+</div>
+<div class="flex items-center justify-between text-secondary">
+<span>Active Index:</span>
+<span class="text-primary font-medium">14 Pages</span>
+</div>
+</div>
+</div>
+<div class="mt-3 pt-2.5 border-t border-surface-container-high flex items-center justify-between">
+<span class="font-label-mono text-[10.5px] text-secondary">Sync every 30m</span>
+<button class="px-3 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-[12px] font-medium transition-colors">Configure</button>
+</div>
+</div>
+<!-- Card 8: Box -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm border border-surface-container-highest flex flex-col justify-between hover:shadow-md transition-shadow group">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center font-bold text-on-surface text-[14px] font-label-mono">BX</div>
+<div>
+<h3 class="font-headline-sm text-[15px] font-semibold text-on-surface group-hover:text-primary transition-colors">Box</h3>
+<span class="font-label-mono text-[10px] text-secondary">Secure Executive Storage</span>
+</div>
+</div>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-surface-container text-secondary font-medium">Available</span>
+</div>
+<p class="font-body-sm text-[12.5px] text-secondary mt-3 leading-relaxed">Enterprise secure file repository sync for executive compensation &amp; M&amp;A dossiers.</p>
+<div class="mt-3 p-2 rounded bg-surface-container-low font-label-mono text-[11px] text-on-surface flex flex-col gap-1">
+<div class="flex items-center justify-between text-secondary">
+<span>Vault Status:</span>
+<span class="text-secondary font-medium">Awaiting Token</span>
+</div>
+<div class="flex items-center justify-between text-secondary">
+<span>Security Tier:</span>
+<span class="text-secondary font-medium">EAL4+ Enclave</span>
+</div>
+</div>
+</div>
+<div class="mt-3 pt-2.5 border-t border-surface-container-high flex items-center justify-between">
+<span class="font-label-mono text-[10.5px] text-secondary">Box Enterprise Plus</span>
+<button class="px-3 py-1 rounded bg-primary-container hover:brightness-105 text-on-primary-fixed font-body-sm text-[12px] font-semibold transition-all flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>Connect</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 3: Real-Time Communication & Operational Sync -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">forum</span>
+<h2 class="font-headline-sm text-[17px] font-semibold text-on-surface">Real-Time Communication &amp; Operational Sync</h2>
+</div>
+<span class="font-label-mono text-[11px] text-secondary">Bi-directional alerting &amp; interactive task triggers for managers and consultants</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Card 9: Slack -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm border border-surface-container-highest flex flex-col justify-between hover:shadow-md transition-shadow group">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center font-bold text-on-surface text-[14px] font-label-mono">SL</div>
+<div>
+<h3 class="font-headline-sm text-[15px] font-semibold text-on-surface group-hover:text-primary transition-colors">Slack</h3>
+<span class="font-label-mono text-[10px] text-secondary">Workspace Alerts &amp; Triggers</span>
+</div>
+</div>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-primary-container text-on-primary-fixed font-semibold">Connected (#org-governance)</span>
+</div>
+<p class="font-body-sm text-[12.5px] text-secondary mt-3 leading-relaxed">Dispatches span of control alerts, policy violation warnings, and AI scenario sign-off notifications directly to #org-governance.</p>
+<div class="mt-3 p-2 rounded bg-surface-container-low font-label-mono text-[11px] text-on-surface flex items-center justify-between">
+<span class="text-secondary">Routing Target:</span>
+<span class="text-primary font-medium">#org-governance · Webhook Live</span>
+</div>
+</div>
+<div class="mt-3 pt-2.5 border-t border-surface-container-high flex items-center justify-between">
+<span class="font-label-mono text-[10.5px] text-secondary">Interactive Blocks v2</span>
+<button class="px-3 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-[12px] font-medium transition-colors">Configure</button>
+</div>
+</div>
+<!-- Card 10: Microsoft Teams -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm border border-surface-container-highest flex flex-col justify-between hover:shadow-md transition-shadow group">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center font-bold text-on-surface text-[14px] font-label-mono">MS</div>
+<div>
+<h3 class="font-headline-sm text-[15px] font-semibold text-on-surface group-hover:text-primary transition-colors">Microsoft Teams</h3>
+<span class="font-label-mono text-[10px] text-secondary">Leadership Approvals Bot</span>
+</div>
+</div>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-primary-container text-on-primary-fixed font-semibold">Connected</span>
+</div>
+<p class="font-body-sm text-[12.5px] text-secondary mt-3 leading-relaxed">Interactive adaptive cards for leadership scenario reviews and transition approvals.</p>
+<div class="mt-3 p-2 rounded bg-surface-container-low font-label-mono text-[11px] text-on-surface flex items-center justify-between">
+<span class="text-secondary">App ID:</span>
+<span class="text-primary font-medium">ms-teams-governance-bot</span>
+</div>
+</div>
+<div class="mt-3 pt-2.5 border-t border-surface-container-high flex items-center justify-between">
+<span class="font-label-mono text-[10.5px] text-secondary">Adaptive Cards 1.5</span>
+<button class="px-3 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-[12px] font-medium transition-colors">Configure</button>
+</div>
+</div>
+<!-- Card 11: Linear / Jira -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm border border-surface-container-highest flex flex-col justify-between hover:shadow-md transition-shadow group">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center font-bold text-on-surface text-[14px] font-label-mono">LN/JR</div>
+<div>
+<h3 class="font-headline-sm text-[15px] font-semibold text-on-surface group-hover:text-primary transition-colors">Linear / Jira</h3>
+<span class="font-label-mono text-[10px] text-secondary">Work &amp; Transition Tracker</span>
+</div>
+</div>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-surface-container text-secondary font-medium">Available</span>
+</div>
+<p class="font-body-sm text-[12.5px] text-secondary mt-3 leading-relaxed">Pushes structural transition tasks and hiring gap tickets to engineering tracking boards.</p>
+<div class="mt-3 p-2 rounded bg-surface-container-low font-label-mono text-[11px] text-on-surface flex items-center justify-between">
+<span class="text-secondary">Board Target:</span>
+<span class="text-secondary font-medium">Unlinked project</span>
+</div>
+</div>
+<div class="mt-3 pt-2.5 border-t border-surface-container-high flex items-center justify-between">
+<span class="font-label-mono text-[10.5px] text-secondary">REST / GraphQL</span>
+<button class="px-3 py-1 rounded bg-primary-container hover:brightness-105 text-on-primary-fixed font-body-sm text-[12px] font-semibold transition-all flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>Connect</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Section: Live Ingestion & Sync Health Stream -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm border border-surface-container-highest flex flex-col gap-space-sm mb-6">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2 border-b border-surface-container-high">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">terminal</span>
+<h3 class="font-headline-sm text-[16px] text-on-surface font-semibold">Live Ingestion &amp; Sync Health Stream</h3>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-mono text-[11px] text-secondary">Daemon Listener Active · Real-time RAG Stream</span>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-3 font-code-md text-[12px] flex flex-col gap-2 border border-surface-container-highest">
+<!-- Telemetry item 1 -->
+<div class="flex items-start sm:items-center justify-between gap-2 flex-col sm:flex-row font-code-md">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-label-mono text-[10px] text-secondary border border-surface-container-highest">14:02:18 UTC</span>
+<span class="font-semibold text-primary">BambooHR:</span>
+<span>142 personnel records ingested into Aramco Digital sandbox</span>
+<span class="font-label-mono text-[11px] text-secondary">(2ms)</span>
+</div>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-primary-container text-on-primary-fixed font-semibold">200 OK</span>
+</div>
+<!-- Telemetry item 2 -->
+<div class="flex items-start sm:items-center justify-between gap-2 flex-col sm:flex-row font-code-md">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-label-mono text-[10px] text-secondary border border-surface-container-highest">13:58:44 UTC</span>
+<span class="font-semibold text-primary">SharePoint:</span>
+<span>Ingested 'Global_Org_Span_Governance_v2.pdf' -&gt; 24 compliance rules extracted</span>
+</div>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-primary-container text-on-primary-fixed font-semibold">RAG INDEXED</span>
+</div>
+<!-- Telemetry item 3 -->
+<div class="flex items-start sm:items-center justify-between gap-2 flex-col sm:flex-row font-code-md">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-label-mono text-[10px] text-secondary border border-surface-container-highest">13:45:10 UTC</span>
+<span class="font-semibold text-primary">Google Drive:</span>
+<span>Synchronized 32 monitored policy files in Shared Drives (batch verified)</span>
+<span class="font-label-mono text-[11px] text-secondary">(18ms)</span>
+</div>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-primary-container text-on-primary-fixed font-semibold">HEALTHY</span>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

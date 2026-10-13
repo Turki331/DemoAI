@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html lang="en" style=""><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-lowest": "#ffffff", "inverse-surface": "#2f3132", "on-error": "#ffffff", "surface-bright": "#f9f9fb", "outline": "#6e7b63", "secondary-fixed-dim": "#c7c6ca", "surface-dim": "#d9dadc", "outline-variant": "#bdcbaf", "on-secondary-container": "#626266", "on-secondary-fixed": "#1b1b1f", "on-primary-container": "#2e7200", "on-primary-fixed-variant": "#1f5100", "on-secondary": "#ffffff", "on-tertiary-fixed-variant": "#44474e", "primary": "#2b6c00", "error-container": "#ffdad6", "on-background": "#1a1c1d", "on-secondary-fixed-variant": "#46464a", "secondary-fixed": "#e3e2e6", "error": "#ba1a1a", "on-primary-fixed": "#082100", "primary-fixed": "#7fff36", "tertiary-container": "#dfe1ea", "on-error-container": "#93000a", "on-surface": "#1a1c1d", "secondary-container": "#e0dfe3", "surface": "#f9f9fb", "background": "#f9f9fb", "surface-container": "#eeeef0", "surface-container-high": "#e8e8ea", "primary-container": "#72ff13", "surface-container-low": "#f3f3f5", "on-primary": "#ffffff", "on-tertiary-fixed": "#181c22", "primary-fixed-dim": "#61e200", "inverse-on-surface": "#f0f0f2", "inverse-primary": "#61e200", "surface-tint": "#2b6c00", "surface-variant": "#e2e2e4", "on-tertiary-container": "#61646c", "surface-container-highest": "#e2e2e4", "on-tertiary": "#ffffff", "secondary": "#5e5e62", "tertiary-fixed-dim": "#c4c6cf", "tertiary-fixed": "#e0e2eb", "tertiary": "#5b5e66", "on-surface-variant": "#3e4b35" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-sm": "0.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "gutter-mobile": "0.75rem", "margin-mobile": "1rem", "space-xl": "2.5rem", "margin": "3rem", "space-md": "1rem", "gutter": "1.5rem" }, "fontFamily": { "headline-sm": ["Inter"], "headline-lg": ["Inter"], "headline-xl": ["Inter"], "metric-display": ["JetBrains Mono"], "headline-lg-mobile": ["Inter"], "body-md": ["Inter"], "label-mono": ["JetBrains Mono"], "headline-md": ["Inter"], "body-sm": ["Inter"], "headline-xl-mobile": ["Inter"], "code-md": ["JetBrains Mono"], "body-lg": ["Inter"] }, "fontSize": { "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "500" }], "headline-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "metric-display": ["32px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "500" }], "headline-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "500" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "label-mono": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "500" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "code-md": ["13px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }] } } } }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed top-0 h-screen w-72 bg-surface-container-lowest border-surface-container-highest z-50 flex flex-col justify-between select-none left-0 border-r"><div class="flex flex-col flex-1"><div class="h-16 px-space-md border-b border-surface-container-highest flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-6 h-6 rounded-lg bg-inverse-surface flex items-center justify-center"><div class="w-2 h-2 rounded bg-primary-container animate-pulse"></div></div><div class="flex flex-col"><span class="font-headline-sm text-body-md font-semibold tracking-tight text-on-surface">Demo AI</span><span class="font-label-mono text-label-mono text-secondary">AGENTIC QA ENGINE</span></div></div><span class="font-label-mono text-label-mono px-1.5 py-0.5 rounded bg-surface-container text-secondary border border-surface-container-highest">v0.1</span></div><div class="p-space-sm flex-1 flex flex-col"><nav class="flex flex-col gap-1 mt-1" data-active-classes="bg-surface-container text-on-surface font-medium border-r-2 border-primary"><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-secondary hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="home" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">grid_view</span>Home</span><span class="font-label-mono text-label-mono opacity-60">01</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-secondary hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="charts" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">insights</span>Charts</span><span class="font-label-mono text-label-mono opacity-60">02</span></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-2 rounded-lg transition-colors bg-surface-container text-on-surface font-medium border-r-2 border-primary" data-path="ai-agents" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">smart_toy</span>AI Agents</span><span class="font-label-mono text-label-mono px-1 py-0.2 bg-primary-container text-on-primary-fixed rounded text-[9px]">8 FLEET</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-secondary hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="knowledge-hub" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">neurology</span>Knowledge Hub</span><span class="font-label-mono text-label-mono opacity-60">04</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-secondary hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="integrations" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">hub</span>Integrations</span><span class="font-label-mono text-label-mono opacity-60">05</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-secondary hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="settings" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">tune</span>Settings</span><span class="font-label-mono text-label-mono opacity-60">06</span></a></nav><div class="p-2.5 rounded-lg bg-surface-container-low border border-surface-container-highest flex flex-col gap-2" style="margin-top: auto;"><div class="flex items-center justify-between"><span class="font-label-mono text-[10px] text-secondary uppercase tracking-wider font-medium flex items-center gap-1"><span class="material-symbols-outlined text-[13px] text-primary">account_balance_wallet</span>Usage &amp; Credits</span><button class="w-5 h-5 rounded flex items-center justify-center bg-surface-container hover:bg-surface-container-high text-on-surface hover:text-primary transition-colors" title="Add Credits"><span class="material-symbols-outlined text-[14px]">add</span></button></div><div class="flex items-baseline justify-between"><div class="flex items-baseline gap-1"><span class="font-metric-display text-[15px] font-medium leading-none text-on-surface">$428.50</span><span class="font-label-mono text-[10px] text-secondary">/ $600</span></div><span class="font-label-mono text-[10px] text-primary font-medium px-1.5 py-0.5 rounded bg-primary-container/20">71% used</span></div><div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full bg-primary-container rounded-full" style="width: 71%"></div></div><div class="grid grid-cols-2 gap-1 pt-1 border-t border-surface-container-high/40 text-label-mono text-[10px] text-secondary"><div class="flex items-center justify-between pr-1"><span class="opacity-70">Daily:</span><span class="font-medium text-on-surface">$34.20</span></div><div class="flex items-center justify-between pl-1 border-l border-surface-container-high/40"><span class="opacity-70">Weekly:</span><span class="font-medium text-on-surface">$218.40</span></div></div></div></div></div><div class="p-space-sm border-t border-surface-container-highest flex flex-col gap-space-sm"><div class="flex items-center justify-between px-1"><div class="flex items-center gap-2"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><a class="flex items-center text-secondary hover:text-on-surface transition-colors cursor-pointer" href="#settings" title="Settings"><span class="material-symbols-outlined text-[18px]">settings</span></a><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col"><span class="font-body-sm text-body-sm font-medium leading-none text-on-surface">lead-eng@demo</span></div></div><a class="flex items-center text-secondary hover:text-on-surface transition-colors cursor-pointer" href="#settings" title="Settings"><span class="material-symbols-outlined text-[18px]">settings</span></a><span class="material-symbols-outlined text-[18px] text-secondary hover:text-on-surface cursor-pointer">logout</span></div></div></aside><div class="pl-72"><header class="fixed top-0 h-16 bg-surface-container-lowest/90 backdrop-blur-md border-b border-surface-container-highest z-40 px-space-md flex items-center left-72 right-0 justify-center"><div class="flex items-center gap-space-md flex-1 max-w-xl mx-auto"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-3 text-[18px] text-secondary">search</span><input class="w-full h-[38px] pl-9 pr-14 rounded-lg bg-surface-container-low border border-surface-container-highest text-body-sm font-body-sm text-on-surface placeholder:text-secondary focus:outline-none focus:border-primary-container" placeholder="Find test suites, agents, traces... (Cmd+K)" type="text"/><span class="absolute right-2 font-label-mono text-[10px] px-1.5 py-0.5 rounded bg-surface-container-high text-secondary border border-surface-container-highest">⌘K</span></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full h-[calc(100vh-4rem)]">
+<!-- Top Breadcrumb & Status Sub-header -->
+<div class="px-6 py-3 border-b border-surface-container-highest bg-surface-container-lowest/60 flex items-center justify-between flex-shrink-0">
+<div class="flex items-center gap-2 text-body-sm">
+<span class="text-secondary hover:text-on-surface transition-colors cursor-pointer flex items-center gap-1">
+<span class="material-symbols-outlined text-[17px]">smart_toy</span>
+        AI Agents
+      </span>
+<span class="text-secondary/50 font-label-mono">/</span>
+<span class="text-on-surface font-medium flex items-center gap-1.5">
+        Specialized Organizational Design Agents
+        <span class="font-label-mono text-[10px] px-1.5 py-0.2 rounded bg-surface-container text-secondary border border-surface-container-highest">v0.1 MVP</span>
+</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-label-mono text-label-mono px-2 py-0.5 rounded-full bg-primary-container/20 text-on-surface font-medium flex items-center gap-1.5 border border-primary-container/30">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+        Target Org: Aramco Digital Scenario B
+      </span>
+<div class="h-4 w-px bg-surface-container-highest"></div>
+<button class="flex items-center gap-1 text-secondary hover:text-on-surface text-body-sm font-body-sm font-medium transition-colors">
+<span class="material-symbols-outlined text-[16px]">history</span>
+        Scenario Revisions
+      </button>
+</div>
+</div>
+<!-- Main 3-Pane / Split-Screen AI Workspace -->
+<div class="flex-1 grid grid-cols-12 overflow-hidden">
+<!-- PANE A: Left Pane (25% width -> 3 cols out of 12) - Agent Library -->
+<section class="col-span-3 border-r border-surface-container-highest bg-surface-container-low/40 flex flex-col h-full overflow-hidden">
+<div class="p-4 border-b border-surface-container-highest flex items-center justify-between flex-shrink-0 bg-surface-container-lowest/40">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[19px]">hub</span>
+<div>
+<h2 class="font-headline-sm text-[15px] font-semibold text-on-surface leading-tight">Select Specialized Agent</h2>
+<p class="font-label-mono text-[11px] text-secondary">4 Available Agents</p>
+</div>
+</div>
+<button class="p-1 rounded hover:bg-surface-container text-secondary hover:text-on-surface transition-colors" title="Filter library">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+<!-- Agent Cards Scrollable List -->
+<div class="flex-1 overflow-y-auto p-3.5 space-y-3">
+<!-- Agent Card 1 (SELECTED / ACTIVE with green accent glow) -->
+<div class="group relative rounded-xl border-2 border-primary-container bg-surface-container-lowest p-3.5 shadow-[0_0_16px_rgba(114,255,19,0.22)] cursor-pointer transition-all">
+<div class="flex items-start justify-between gap-2 mb-2">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">account_tree</span>
+</div>
+<div>
+<h3 class="font-body-md text-[14px] font-semibold text-on-surface leading-snug">Org Restructure Agent</h3>
+<span class="font-label-mono text-[10px] text-primary flex items-center gap-1 font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                  SELECTED • ACTIVE
+                </span>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+</div>
+<p class="font-body-sm text-[12px] text-secondary leading-relaxed mb-3">
+            Analyzes spans, flattens hierarchies, identifies managerial bottlenecks, and models headcount consolidation.
+          </p>
+<div class="flex flex-wrap gap-1.5 mb-3">
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-surface-container text-on-surface border border-surface-container-highest">Spans Analysis</span>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-surface-container text-on-surface border border-surface-container-highest">Hierarchy Flattening</span>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-surface-container text-on-surface border border-surface-container-highest">Cost Optimization</span>
+</div>
+<div class="pt-2 border-t border-surface-container-high/60 flex items-center justify-between text-label-mono text-[10px] text-secondary">
+<span>Model</span>
+<span class="font-code-md text-on-surface font-medium">Claude 3.5 Sonnet / Reasoning v0.1</span>
+</div>
+</div>
+<!-- Agent Card 2: Compliance Auditor Agent -->
+<div class="group relative rounded-xl border border-surface-container-highest bg-surface-container-lowest hover:border-outline-variant p-3.5 hover:shadow-sm cursor-pointer transition-all">
+<div class="flex items-start justify-between gap-2 mb-2">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary group-hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+</div>
+<div>
+<h3 class="font-body-md text-[14px] font-semibold text-on-surface leading-snug">Compliance Auditor Agent</h3>
+<span class="font-label-mono text-[10px] text-secondary">Regulatory &amp; Labor Law</span>
+</div>
+</div>
+<span class="font-label-mono text-[9px] px-1.5 py-0.5 rounded bg-surface-container text-secondary">STANDBY</span>
+</div>
+<p class="font-body-sm text-[12px] text-secondary leading-relaxed mb-3">
+            Scans active scenarios against corporate SOPs and regional labor laws (e.g. Saudi Labor Law).
+          </p>
+<div class="flex flex-wrap gap-1.5 mb-2.5">
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-surface-container-low text-secondary">Regulatory Verification</span>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-surface-container-low text-secondary">Article 77 Check</span>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-surface-container-low text-secondary">Policy Tagging</span>
+</div>
+</div>
+<!-- Agent Card 3: Transition Planner Agent -->
+<div class="group relative rounded-xl border border-surface-container-highest bg-surface-container-lowest hover:border-outline-variant p-3.5 hover:shadow-sm cursor-pointer transition-all">
+<div class="flex items-start justify-between gap-2 mb-2">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary group-hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">event_repeat</span>
+</div>
+<div>
+<h3 class="font-body-md text-[14px] font-semibold text-on-surface leading-snug">Transition Planner Agent</h3>
+<span class="font-label-mono text-[10px] text-secondary">Change Management</span>
+</div>
+</div>
+<span class="font-label-mono text-[9px] px-1.5 py-0.5 rounded bg-surface-container text-secondary">STANDBY</span>
+</div>
+<p class="font-body-sm text-[12px] text-secondary leading-relaxed mb-3">
+            Drafts change management roadmaps, phase-in schedules, severance modeling, and retention packages.
+          </p>
+<div class="flex flex-wrap gap-1.5 mb-2.5">
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-surface-container-low text-secondary">Milestone Scheduling</span>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-surface-container-low text-secondary">Risk Mitigation</span>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-surface-container-low text-secondary">Change Comms</span>
+</div>
+</div>
+<!-- Agent Card 4: Role & Competency Drafter -->
+<div class="group relative rounded-xl border border-surface-container-highest bg-surface-container-lowest hover:border-outline-variant p-3.5 hover:shadow-sm cursor-pointer transition-all">
+<div class="flex items-start justify-between gap-2 mb-2">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary group-hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+</div>
+<div>
+<h3 class="font-body-md text-[14px] font-semibold text-on-surface leading-snug">Role &amp; Competency Drafter</h3>
+<span class="font-label-mono text-[10px] text-secondary">Job Spec Generation</span>
+</div>
+</div>
+<span class="font-label-mono text-[9px] px-1.5 py-0.5 rounded bg-surface-container text-secondary">STANDBY</span>
+</div>
+<p class="font-body-sm text-[12px] text-secondary leading-relaxed mb-3">
+            Auto-generates hierarchical job specs, skill matrices, and 5 measurable KPIs for newly created nodes.
+          </p>
+<div class="flex flex-wrap gap-1.5 mb-2.5">
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-surface-container-low text-secondary">Job Specs</span>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-surface-container-low text-secondary">Skill Matrices</span>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded bg-surface-container-low text-secondary">5-Point KPIs</span>
+</div>
+</div>
+</div>
+</section>
+<!-- PANE B: Center Pane (45% width -> ~5.4 cols, styled as col-span-5 or 45% flex) - Main Chat / Command Canvas -->
+<section class="col-span-5 border-r border-surface-container-highest bg-surface flex flex-col h-full overflow-hidden">
+<!-- Agent Context Header -->
+<div class="px-5 py-3.5 border-b border-surface-container-highest bg-surface-container-lowest flex items-center justify-between flex-shrink-0">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-primary-container/20 border border-primary-container/40 flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary">psychology</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-[14px] font-semibold text-on-surface">Chatting with: Org Restructure Agent</h2>
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+</div>
+<span class="font-label-mono text-[11px] text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">dataset</span>
+              Active Target: Aramco Digital Scenario B
+            </span>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="h-7 px-2.5 rounded bg-surface-container-low hover:bg-surface-container text-secondary hover:text-on-surface text-[12px] font-label-mono flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+            Strict Span Mode
+          </button>
+<button class="w-7 h-7 rounded hover:bg-surface-container text-secondary hover:text-on-surface flex items-center justify-center transition-colors" title="Clear chat session">
+<span class="material-symbols-outlined text-[17px]">restart_alt</span>
+</button>
+</div>
+</div>
+<!-- Chat Conversation Flow -->
+<div class="flex-1 overflow-y-auto p-5 space-y-4">
+<!-- System contextual alert -->
+<div class="mx-auto max-w-md py-1.5 px-3 rounded-lg bg-surface-container-low border border-surface-container-highest/80 text-center font-label-mono text-[11px] text-secondary flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[14px] text-primary">security</span>
+          Scenario B (42 Nodes) synced from Org Chart Canvas • Live Staging Active
+        </div>
+<!-- User Message -->
+<div class="flex flex-col items-end gap-1.5 pl-10">
+<div class="flex items-center gap-2 text-label-mono text-[10px] text-secondary">
+<span>You (Lead Organization Designer)</span>
+<span>10:42 AM</span>
+</div>
+<div class="bg-inverse-surface text-inverse-on-surface rounded-2xl rounded-tr-sm px-4 py-3 text-body-sm leading-relaxed max-w-lg shadow-sm">
+            Flatten the product engineering department by one layer and ensure no manager has more than 6 direct reports.
+          </div>
+</div>
+<!-- Agent Response with Reasoning -->
+<div class="flex flex-col items-start gap-1.5 pr-6">
+<div class="flex items-center gap-2 text-label-mono text-[10px] text-secondary">
+<div class="w-4 h-4 rounded bg-primary-container flex items-center justify-center text-[10px] font-bold text-on-primary-fixed">α</div>
+<span class="font-semibold text-on-surface">Org Restructure Agent</span>
+<span class="px-1.5 py-0.2 rounded bg-primary-container/20 text-primary font-medium">REASONING COMPLETE</span>
+<span>10:42 AM</span>
+</div>
+<div class="w-full bg-surface-container-lowest border border-surface-container-highest rounded-2xl rounded-tl-sm p-4 text-body-sm shadow-sm flex flex-col gap-3">
+<div class="font-code-md text-code-md text-secondary border-b border-surface-container pb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">analytics</span>
+              Analyzing 42 engineering nodes under VP Product &amp; Platform...
+            </div>
+<div class="space-y-2.5 text-on-surface text-[13px] leading-relaxed">
+<div class="flex items-start gap-2.5 p-2 rounded-lg bg-surface-container-low/70">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<div>
+<span class="font-semibold text-on-surface">Found 1 layer redundancy:</span>
+<span class="text-secondary"> Merged 'Associate Director' tier into 'Principal Manager'.</span>
+</div>
+</div>
+<div class="flex items-start gap-2.5 p-2 rounded-lg bg-surface-container-low/70">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<div>
+<span class="font-semibold text-on-surface">Rebalanced VP Product direct reports:</span>
+<span class="text-secondary"> Reduced from <span class="text-error font-medium line-through">11</span> down to <span class="text-primary font-semibold">6</span> by transferring platform infrastructure leads under Director of Core Platform.</span>
+</div>
+</div>
+<div class="flex items-start gap-2.5 p-2 rounded-lg bg-primary-container/10 border border-primary-container/30">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">trending_up</span>
+<div>
+<span class="font-semibold text-on-surface">Projected annual compensation delta:</span>
+<span class="text-primary font-metric-display font-medium text-[14px]"> -$1.45M/year</span>
+<span class="text-secondary text-[11px] block mt-0.5">Elimination of 4 overlapping middle-management bands while preserving delivery velocity.</span>
+</div>
+</div>
+</div>
+<!-- Staged changes indicator link -->
+<div class="mt-1 pt-2 border-t border-surface-container flex items-center justify-between text-label-mono text-[11px]">
+<span class="text-secondary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                Staged diff preview available in Action Window
+              </span>
+<button class="text-primary hover:underline font-medium flex items-center gap-1">
+                View Detailed Diff <span class="material-symbols-outlined text-[13px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Suggested Prompts / Chips & Input Bar Footer -->
+<div class="p-4 border-t border-surface-container-highest bg-surface-container-lowest flex flex-col gap-2.5 flex-shrink-0">
+<!-- Suggested Prompts / Chips (Clickable suggestion pills directly above the input box) -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 text-label-mono text-[11px] whitespace-nowrap">
+<span class="text-secondary uppercase text-[10px] tracking-wider shrink-0 flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">auto_awesome</span> Prompts:
+          </span>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-surface-container border border-surface-container-highest text-on-surface transition-colors flex items-center gap-1">
+<span>✨</span> Flatten this department by 1 layer
+          </button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-surface-container border border-surface-container-highest text-on-surface transition-colors flex items-center gap-1">
+<span>⚠️</span> Identify all span-of-control bottlenecks
+          </button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-surface-container border border-surface-container-highest text-on-surface transition-colors flex items-center gap-1">
+<span>📉</span> Model 15% headcount reduction scenario
+          </button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-surface-container border border-surface-container-highest text-on-surface transition-colors flex items-center gap-1">
+<span>⚖️</span> Check scenario for Saudi Labor Law compliance
+          </button>
+</div>
+<!-- Chat Input Bar -->
+<div class="relative rounded-xl border border-surface-container-highest bg-surface-container-low/60 focus-within:border-primary-container focus-within:bg-surface-container-lowest focus-within:shadow-[0_0_0_1px_rgba(114,255,19,0.5)] transition-all p-2 flex flex-col gap-2">
+<textarea class="w-full bg-transparent resize-none border-none outline-none font-body-sm text-[13px] text-on-surface placeholder:text-secondary px-1" placeholder="Give instructions to Org Restructure Agent (e.g., 'Merge duplicate ops functions')..." rows="2"></textarea>
+<div class="flex items-center justify-between pt-1 border-t border-surface-container-high/50">
+<div class="flex items-center gap-1">
+<button class="h-8 px-2.5 rounded-lg text-secondary hover:text-on-surface hover:bg-surface-container flex items-center gap-1.5 text-label-mono text-[11px] transition-colors" title="Attach Scenario Context">
+<span class="material-symbols-outlined text-[16px]">attachment</span>
+                Attach Scenario Context
+              </button>
+<button class="w-8 h-8 rounded-lg text-secondary hover:text-on-surface hover:bg-surface-container flex items-center justify-center transition-colors" title="Voice Input">
+<span class="material-symbols-outlined text-[17px]">mic</span>
+</button>
+</div>
+<button class="h-8 px-4 rounded-lg bg-primary-container text-on-primary-fixed hover:brightness-105 active:scale-95 transition-all font-body-sm text-[13px] font-semibold flex items-center gap-1.5 shadow-sm">
+<span>Send Command</span>
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- PANE C: Right Pane (30% width -> 4 cols out of 12) - Action Output Window -->
+<section class="col-span-4 bg-surface-container-lowest flex flex-col h-full overflow-hidden">
+<!-- Header & Badge -->
+<div class="p-4 border-b border-surface-container-highest flex flex-col gap-2 flex-shrink-0 bg-surface-container-lowest">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[19px]">fact_check</span>
+<h2 class="font-headline-sm text-[15px] font-semibold text-on-surface">Agent Work Preview &amp; Staged Changes</h2>
+</div>
+<button class="text-secondary hover:text-on-surface transition-colors" title="Expand view">
+<span class="material-symbols-outlined text-[18px]">open_in_full</span>
+</button>
+</div>
+<div>
+<span class="font-label-mono text-[10px] px-2 py-0.5 rounded-full bg-primary-container/20 text-on-primary-fixed-variant font-medium border border-primary-container/40 inline-flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+            Unapplied Staged Diff (Ready for Review)
+          </span>
+</div>
+</div>
+<!-- Action Output Content (Scrollable) -->
+<div class="flex-1 overflow-y-auto p-4 space-y-4">
+<!-- Visual Mini-Diff Preview of Org Chart Structure -->
+<div class="rounded-xl border border-surface-container-highest bg-surface p-3.5 flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-[11px] uppercase tracking-wider text-secondary font-medium">Org Hierarchy Mini-Diff</span>
+<span class="font-label-mono text-[10px] text-secondary">Aramco Digital / Engineering</span>
+</div>
+<!-- Tree Visual Representation -->
+<div class="p-3 bg-surface-container-lowest rounded-lg border border-surface-container-highest/80 font-code-md text-[11px] space-y-2">
+<!-- Root -->
+<div class="flex items-center gap-2 text-on-surface font-semibold">
+<span class="w-2 h-2 rounded bg-on-surface"></span>
+              VP Product &amp; Platform (Level 8)
+            </div>
+<!-- Removed Layers (Red Strikeout) -->
+<div class="pl-4 border-l-2 border-error/50 space-y-1.5 my-1">
+<div class="p-2 rounded bg-error-container/30 border border-error/20 text-error flex items-start justify-between">
+<div>
+<div class="line-through font-medium">❌ Associate Director: Mobile Apps (Level 7)</div>
+<span class="text-[10px] text-on-surface-variant line-through opacity-80 pl-4 block">3 direct reports • Tier redundancy</span>
+</div>
+<span class="font-label-mono text-[9px] px-1.5 py-0.2 rounded bg-error/10 uppercase font-semibold text-error shrink-0">REMOVED</span>
+</div>
+<div class="p-2 rounded bg-error-container/30 border border-error/20 text-error flex items-start justify-between">
+<div>
+<div class="line-through font-medium">❌ Associate Director: Web Core (Level 7)</div>
+<span class="text-[10px] text-on-surface-variant line-through opacity-80 pl-4 block">4 direct reports • Span bottleneck</span>
+</div>
+<span class="font-label-mono text-[9px] px-1.5 py-0.2 rounded bg-error/10 uppercase font-semibold text-error shrink-0">REMOVED</span>
+</div>
+</div>
+<!-- New Consolidated Role (Green Highlight) -->
+<div class="pl-4 border-l-2 border-primary-container space-y-1 my-1">
+<div class="p-2.5 rounded-lg bg-primary-container/20 border border-primary-container text-on-surface flex items-start justify-between">
+<div>
+<div class="font-semibold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[15px]">add_circle</span>
+                    Director of Core Platform (Level 7 - Consolidated)
+                  </div>
+<span class="text-[10px] text-primary font-medium pl-5 block mt-0.5">
+                    Unified infrastructure, web, &amp; mobile leads under 1 streamlined hub
+                  </span>
+</div>
+<span class="font-label-mono text-[9px] px-1.5 py-0.2 rounded bg-primary-container text-on-primary-fixed uppercase font-semibold shrink-0">NEW NODE</span>
+</div>
+</div>
+<!-- Preserved/Reassigned Leaf Nodes -->
+<div class="pl-8 text-secondary text-[11px] flex items-center gap-1.5 pt-1">
+<span class="material-symbols-outlined text-[14px] text-primary">subdirectory_arrow_right</span>
+<span>Reassigned: 6 Principal Tech Leads directly into Core Platform</span>
+</div>
+</div>
+</div>
+<!-- Key Metrics Changed Summary -->
+<div class="rounded-xl border border-surface-container-highest bg-surface p-3.5 flex flex-col gap-3">
+<span class="font-label-mono text-[11px] uppercase tracking-wider text-secondary font-medium">Key Metrics Changed</span>
+<div class="grid grid-cols-3 gap-2">
+<!-- Metric 1: Headcount -->
+<div class="p-2.5 rounded-lg bg-surface-container-lowest border border-surface-container-highest flex flex-col justify-between">
+<span class="font-label-mono text-[10px] text-secondary uppercase">Headcount</span>
+<div class="mt-1">
+<span class="font-metric-display text-[15px] font-semibold text-on-surface">42 → 38</span>
+<span class="font-label-mono text-[10px] text-primary block font-medium">-4 roles</span>
+</div>
+</div>
+<!-- Metric 2: Span of Control -->
+<div class="p-2.5 rounded-lg bg-surface-container-lowest border border-surface-container-highest flex flex-col justify-between">
+<span class="font-label-mono text-[10px] text-secondary uppercase">Span of Control</span>
+<div class="mt-1">
+<span class="font-metric-display text-[15px] font-semibold text-on-surface">Max 6</span>
+<span class="font-label-mono text-[10px] text-primary block font-medium">Was 11 (100% OK)</span>
+</div>
+</div>
+<!-- Metric 3: Annual Savings -->
+<div class="p-2.5 rounded-lg bg-surface-container-lowest border border-surface-container-highest flex flex-col justify-between">
+<span class="font-label-mono text-[10px] text-secondary uppercase">Annual Savings</span>
+<div class="mt-1">
+<span class="font-metric-display text-[15px] font-semibold text-primary">$1.45M</span>
+<span class="font-label-mono text-[10px] text-secondary block">/ year net</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Staged Transition Checklist -->
+<div class="rounded-xl border border-surface-container-highest bg-surface p-3.5 flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-[11px] uppercase tracking-wider text-secondary font-medium">Staged Transition Checklist</span>
+<span class="font-label-mono text-[10px] text-primary font-medium">2 / 3 Tasks</span>
+</div>
+<div class="space-y-2 text-body-sm text-[12px]">
+<label class="flex items-center gap-2.5 p-2 rounded-lg bg-surface-container-lowest border border-surface-container-highest cursor-pointer hover:bg-surface-container-low transition-colors">
+<input checked="" class="accent-primary w-4 h-4 rounded" type="checkbox"/>
+<span class="text-on-surface line-through opacity-80">Node reassignment draft ready</span>
+<span class="material-symbols-outlined text-primary text-[16px] ml-auto">task_alt</span>
+</label>
+<label class="flex items-center gap-2.5 p-2 rounded-lg bg-surface-container-lowest border border-surface-container-highest cursor-pointer hover:bg-surface-container-low transition-colors">
+<input checked="" class="accent-primary w-4 h-4 rounded" type="checkbox"/>
+<span class="text-on-surface line-through opacity-80">4 updated job descriptions generated</span>
+<span class="material-symbols-outlined text-primary text-[16px] ml-auto">task_alt</span>
+</label>
+<label class="flex items-center gap-2.5 p-2 rounded-lg bg-surface-container-lowest border border-surface-container-highest cursor-pointer hover:bg-surface-container-low transition-colors">
+<input class="accent-primary w-4 h-4 rounded" type="checkbox"/>
+<span class="text-on-surface font-medium">Client presentation deck updated</span>
+<span class="font-label-mono text-[9px] px-1.5 py-0.5 rounded bg-surface-container text-secondary ml-auto">PENDING</span>
+</label>
+</div>
+</div>
+</div>
+<!-- Bottom Action Buttons -->
+<div class="p-4 border-t border-surface-container-highest bg-surface-container-lowest flex flex-col gap-2 flex-shrink-0">
+<button class="w-full h-10 px-4 rounded-lg bg-primary-container text-on-primary-fixed hover:brightness-105 active:scale-95 transition-all font-body-sm text-[13px] font-semibold flex items-center justify-center gap-2 shadow-sm" id="applyBtn">
+<span class="material-symbols-outlined text-[18px]">check</span>
+          Accept &amp; Apply to Active Canvas
+        </button>
+<div class="grid grid-cols-2 gap-2">
+<button class="h-8 px-3 rounded-lg border border-surface-container-highest text-secondary hover:text-on-surface hover:bg-surface-container transition-colors font-body-sm text-[12px] font-medium flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[15px]">picture_as_pdf</span>
+            Export Diff Report (PDF)
+          </button>
+<button class="h-8 px-3 rounded-lg text-secondary hover:text-error hover:bg-error-container/20 transition-colors font-body-sm text-[12px] font-medium flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[15px]">close</span>
+            Discard Staged Changes
+          </button>
+</div>
+</div>
+</section>
+</div>
+</div>
+<script>
+  (function() {
+    // Quick interactions for demonstration
+    const applyBtn = document.getElementById('applyBtn');
+    if (applyBtn) {
+      applyBtn.addEventListener('click', () => {
+        const originalHtml = applyBtn.innerHTML;
+        applyBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>Applying to Scenario B...</span>';
+        setTimeout(() => {
+          applyBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">task_alt</span><span>Changes Applied Successfully!</span>';
+          applyBtn.classList.remove('bg-primary-container');
+          applyBtn.classList.add('bg-primary', 'text-white');
+          setTimeout(() => {
+            applyBtn.innerHTML = originalHtml;
+            applyBtn.classList.add('bg-primary-container');
+            applyBtn.classList.remove('bg-primary', 'text-white');
+          }, 2400);
+        }, 900);
+      });
+    }
+  })();
+</script></main></div></body></html>
