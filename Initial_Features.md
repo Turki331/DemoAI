@@ -1,5 +1,7 @@
 # SaaS Platform Feature Requirements: V0.1 MVP
 
+This SaaS is meant as a solution for Maayish's (Small Managament consulting firm) Hackathon. They seek Submissions that are ment to solve some of the challenges they're facing in the industry (like how to track if the client is actually implementing the solution rather than the ppt is just sitting to collect dust, among many other problems. 
+
 ## 1. The Organizational Chart (In the Chart Page)
 **1. Automated Chart Generation & Data Ingestion**
 *   **Data-Driven Chart Builder & Templates:** Automatically builds scalable, interactive org charts from imported HRIS, ATS, Slack, or CSV data, with support for pre-built industry templates and live auto-updating data feeds.
